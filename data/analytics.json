@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "date": "2026-05-06T12:08:55.132Z",
+      "total": 85,
+      "topScore": 5,
+      "categories": {
+        "LLM": 25,
+        "Open Source": 15,
+        "Coding AI": 30,
+        "Agentic AI": 15
+      }
+    },
+    {
+      "date": "2026-05-06T12:31:43.250Z",
+      "total": 85,
+      "topScore": 10,
+      "categories": {
+        "LLM": 25,
+        "Coding AI": 45,
+        "Benchmark": 1,
+        "Agentic AI": 6,
+        "Enterprise AI": 3,
+        "Open Source": 5
+      }
+    }
+  ]
+}

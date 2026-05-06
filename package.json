@@ -1,0 +1,27 @@
+{
+  "name": "ai-news-aggregator",
+  "version": "1.0.0",
+  "description": "Autonomous AI news aggregator with free local analysis and static dashboard.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node src/pipeline/build-digest.js --dev",
+    "scrape": "node src/pipeline/build-digest.js --step=scrape",
+    "analyze": "node src/pipeline/build-digest.js --step=analyze",
+    "build:dashboard": "node src/pipeline/build-digest.js --step=dashboard",
+    "build:all": "node src/pipeline/build-digest.js --step=all",
+    "start": "node src/pipeline/build-digest.js --step=all"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bottleneck": "^2.19.5",
+    "cheerio": "^1.0.0",
+    "date-fns": "^4.1.0",
+    "p-limit": "^6.2.0",
+    "p-retry": "^6.2.1",
+    "pino": "^9.6.0",
+    "rss-parser": "^3.13.0"
+  }
+}
