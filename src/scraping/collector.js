@@ -57,9 +57,10 @@ const enrichLimiter = new Bottleneck({ minTime: 250, maxConcurrent: 4 });
 async function fetchOgMeta(url) {
   try {
     const { data } = await axios.get(url, {
-      timeout: 8000,
+      timeout: 6000,
       headers: { "User-Agent": "ai-news-aggregator/1.0" },
-      maxContentLength: 800_000
+      maxContentLength: 800_000,
+      maxRedirects: 3
     });
     const $ = cheerio.load(data);
     const description =
@@ -100,6 +101,11 @@ async function enrichEntries(entries) {
       })
     )
   );
+  try {
+    await enrichLimiter.disconnect();
+  } catch {
+    // ignore disconnect errors
+  }
   return entries;
 }
 
@@ -231,6 +237,12 @@ export async function collectNews() {
 
   await enrichEntries(items);
   logger.info({ total: items.length }, "Articles enriched with og metadata");
+
+  try {
+    await limiter.disconnect();
+  } catch {
+    // ignore disconnect errors
+  }
 
   return {
     runAt,

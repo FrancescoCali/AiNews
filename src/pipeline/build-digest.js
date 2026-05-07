@@ -84,7 +84,11 @@ async function main() {
   logger.info({ total: analyzed.length }, "Pipeline completed");
 }
 
-main().catch((err) => {
-  logger.error({ err: err.message, stack: err.stack }, "Pipeline failed");
-  process.exit(1);
-});
+main()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((err) => {
+    logger.error({ err: err.message, stack: err.stack }, "Pipeline failed");
+    process.exit(1);
+  });
