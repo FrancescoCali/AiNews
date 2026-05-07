@@ -52,6 +52,57 @@ function extractImage(item, html = "") {
   return $('meta[property="og:image"]').attr("content") || $("img").first().attr("src") || null;
 }
 
+const enrichLimiter = new Bottleneck({ minTime: 250, maxConcurrent: 4 });
+
+async function fetchOgMeta(url) {
+  try {
+    const { data } = await axios.get(url, {
+      timeout: 8000,
+      headers: { "User-Agent": "ai-news-aggregator/1.0" },
+      maxContentLength: 800_000
+    });
+    const $ = cheerio.load(data);
+    const description =
+      $('meta[property="og:description"]').attr("content") ||
+      $('meta[name="description"]').attr("content") ||
+      $('meta[name="twitter:description"]').attr("content") ||
+      $("article p").first().text().trim() ||
+      $("p").first().text().trim() ||
+      "";
+    const image =
+      $('meta[property="og:image"]').attr("content") ||
+      $('meta[name="twitter:image"]').attr("content") ||
+      null;
+    return {
+      description: description ? description.replace(/\s+/g, " ").trim().slice(0, 480) : "",
+      image
+    };
+  } catch {
+    return { description: "", image: null };
+  }
+}
+
+async function enrichEntries(entries) {
+  const targets = entries.filter((entry) => {
+    const desc = (entry.description || "").trim();
+    return entry.url && desc.length < 80;
+  });
+  await Promise.all(
+    targets.map((entry) =>
+      enrichLimiter.schedule(async () => {
+        const { description, image } = await fetchOgMeta(entry.url);
+        if (description && description.length > entry.description.length) {
+          entry.description = description;
+        }
+        if (!entry.image && image) {
+          entry.image = image;
+        }
+      })
+    )
+  );
+  return entries;
+}
+
 function normalizeEntry(source, item) {
   const description = item.contentSnippet || item.summary || item.content || "";
   const rawUrl = item.link || item.guid || "";
@@ -177,6 +228,10 @@ export async function collectNews() {
       dedupeSet.add(key);
       return true;
     });
+
+  await enrichEntries(items);
+  logger.info({ total: items.length }, "Articles enriched with og metadata");
+
   return {
     runAt,
     total: items.length,

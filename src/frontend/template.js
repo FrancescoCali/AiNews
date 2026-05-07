@@ -97,25 +97,48 @@ export function renderHtml(newsItems, meta) {
       categoryFilter.appendChild(option);
     });
 
+    function escapeHtmlGlobal(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
     const topItem = sorted[0];
     mostImportant.innerHTML = topItem ? \`
-      <div class="flex items-center justify-between gap-3">
-        <div>
-          <span class="text-xs px-2 py-1 rounded bg-violet-500/30">\${topItem.category}</span>
-          <h3 class="mt-2 text-lg font-medium">\${topItem.title}</h3>
-          <p class="mt-2 text-sm text-slate-300">\${topItem.summary}</p>
-          <a class="text-violet-300 text-sm mt-2 inline-block" href="\${topItem.url}" target="_blank" rel="noreferrer">Apri fonte</a>
+      <div class="flex items-start justify-between gap-3">
+        <div class="flex-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs px-2 py-1 rounded bg-violet-500/30">\${escapeHtmlGlobal(topItem.category)}</span>
+            <span class="text-xs text-slate-400">\${escapeHtmlGlobal(topItem.source)}</span>
+          </div>
+          <h3 class="mt-2 text-lg md:text-xl font-medium">\${escapeHtmlGlobal(topItem.title)}</h3>
+          <p class="mt-2 text-sm text-slate-200">\${escapeHtmlGlobal(topItem.summary)}</p>
+          <a class="text-violet-300 text-sm mt-3 inline-block" href="\${escapeHtmlGlobal(topItem.url)}" target="_blank" rel="noreferrer">Apri articolo →</a>
         </div>
         <div class="text-3xl font-bold text-violet-300">\${topItem.score}/10</div>
       </div>\`
       : "<p>Nessun dato disponibile.</p>";
 
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
     function renderTopFive(items) {
       topFive.innerHTML = items.slice(0, 5).map((item, i) => \`
-        <article class="rounded-xl border border-white/10 bg-slate-900/80 p-3 transition hover:-translate-y-1">
-          <p class="text-xs text-slate-400">#\${i + 1} • \${item.source}</p>
-          <h3 class="mt-1 text-sm font-medium line-clamp-3">\${item.title}</h3>
-          <p class="mt-2 text-xs text-slate-400">Punteggio: \${item.score}</p>
+        <article class="rounded-xl border border-white/10 bg-slate-900/80 p-3 transition hover:-translate-y-1 flex flex-col gap-2">
+          <p class="text-xs text-slate-400">#\${i + 1} • \${escapeHtml(item.source)}</p>
+          <h3 class="text-sm font-medium line-clamp-3">\${escapeHtml(item.title)}</h3>
+          <p class="text-xs text-slate-400 line-clamp-4">\${escapeHtml(item.summary)}</p>
+          <div class="flex items-center justify-between mt-auto pt-2">
+            <span class="text-xs text-violet-300">\${item.score}/10</span>
+            <a class="text-xs text-cyan-300" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Apri →</a>
+          </div>
         </article>
       \`).join("");
     }
@@ -139,19 +162,37 @@ export function renderHtml(newsItems, meta) {
     }
 
     function renderTimeline(items) {
-      timeline.innerHTML = items.map((item) => \`
+      timeline.innerHTML = items.map((item) => {
+        const summary = escapeHtml(item.summary || "");
+        const fullSummary = summary;
+        const isLong = summary.length > 220;
+        const shortSummary = isLong ? summary.slice(0, 220).trim() + "…" : summary;
+        return \`
         <article class="rounded-2xl border border-white/10 bg-glass backdrop-blur p-4 transition hover:border-violet-300/40">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="text-xs px-2 py-1 rounded bg-slate-800">\${item.category}</span>
-            <span class="text-xs text-slate-400">\${new Date(item.date).toLocaleString("it-IT")}</span>
+            <span class="text-xs px-2 py-1 rounded bg-slate-800">\${escapeHtml(item.category)}</span>
+            <span class="text-xs text-slate-400">\${escapeHtml(item.source)}</span>
+            <span class="text-xs text-slate-500">\${new Date(item.date).toLocaleString("it-IT")}</span>
             <span class="text-xs text-violet-300">Punteggio \${item.score}/10</span>
           </div>
-          <h3 class="mt-2 text-lg font-medium">\${item.title}</h3>
-          <p class="mt-2 text-sm text-slate-300">\${item.summary}</p>
-          <p class="mt-2 text-xs text-slate-400">\${(item.keywords || []).join(" • ")}</p>
-          <a class="text-sm text-cyan-300 mt-2 inline-block" href="\${item.url}" target="_blank" rel="noreferrer">Apri articolo</a>
+          <h3 class="mt-2 text-lg font-medium">\${escapeHtml(item.title)}</h3>
+          <p class="mt-2 text-sm text-slate-300 summary-text" data-short="\${shortSummary}" data-full="\${fullSummary}">\${shortSummary}</p>
+          \${isLong ? '<button class="toggle-summary text-xs text-violet-300 hover:underline mt-1">Mostra di più</button>' : ''}
+          <p class="mt-2 text-xs text-slate-400">\${(item.keywords || []).map(escapeHtml).join(" • ")}</p>
+          <a class="text-sm text-cyan-300 mt-2 inline-block" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Apri articolo →</a>
         </article>
-      \`).join("");
+      \`;
+      }).join("");
+
+      timeline.querySelectorAll('.toggle-summary').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const p = btn.previousElementSibling;
+          const expanded = p.dataset.expanded === 'true';
+          p.innerHTML = expanded ? p.dataset.short : p.dataset.full;
+          p.dataset.expanded = expanded ? 'false' : 'true';
+          btn.textContent = expanded ? 'Mostra di più' : 'Mostra meno';
+        });
+      });
     }
 
     function filterItems() {
