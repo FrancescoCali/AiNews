@@ -98,7 +98,24 @@ function translateToItalianLocal(text = "") {
   return out;
 }
 
-function buildSummary(item) {
+function buildEnglishSummary(item) {
+  const base = (item.description || "").replace(/\s+/g, " ").trim();
+
+  if (item.source === "Hacker News AI") {
+    if (!base || base.startsWith("Article URL")) {
+      return `Community signal from Hacker News: ${item.title}.`;
+    }
+    return base.length > 360 ? `${base.slice(0, 360).trim()}…` : base;
+  }
+
+  if (!base) {
+    return `${item.title}. Update published by ${item.source}.`;
+  }
+
+  return base.length > 360 ? `${base.slice(0, 360).trim()}…` : base;
+}
+
+function buildItalianSummary(item) {
   const base = (item.description || "").replace(/\s+/g, " ").trim();
 
   if (item.source === "Hacker News AI") {
@@ -120,11 +137,15 @@ export async function analyzeNews(items) {
   const deduped = localSemanticDedup(items);
   return deduped.map((item) => {
     const category = inferCategory(item);
+    const summaryEn = buildEnglishSummary(item);
+    const summaryIt = buildItalianSummary(item);
     return {
       title: item.title,
       source: item.source,
       url: item.url,
-      summary: buildSummary(item),
+      summary: summaryEn,
+      summaryIt,
+      summaryEn,
       score: computeScore(item, category),
       category,
       date: item.date,
