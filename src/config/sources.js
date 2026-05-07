@@ -73,7 +73,7 @@ export const SOURCES = [
     id: "adobe-blog",
     name: "Adobe Blog",
     categoryHint: "AI Design",
-    rss: "https://blog.adobe.com/en/feeds/all.xml",
+    rss: null,
     homepage: "https://blog.adobe.com/en/topics/ai"
   },
   {
@@ -82,6 +82,83 @@ export const SOURCES = [
     categoryHint: "AI Design",
     rss: null,
     homepage: "https://www.framer.com/blog/"
+  },
+  {
+    id: "webflow-blog",
+    name: "Webflow Blog",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://webflow.com/blog"
+  },
+  {
+    id: "spline-blog",
+    name: "Spline",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://spline.design/blog"
+  },
+  {
+    id: "sketch-blog",
+    name: "Sketch Blog",
+    categoryHint: "AI Design",
+    rss: "https://www.sketch.com/blog/feed/",
+    homepage: "https://www.sketch.com/blog/"
+  },
+  {
+    id: "runway-news",
+    name: "Runway",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://runwayml.com/news"
+  },
+  {
+    id: "midjourney-updates",
+    name: "Midjourney Updates",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://www.midjourney.com/updates"
+  },
+  {
+    id: "stability-ai-news",
+    name: "Stability AI News",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://stability.ai/news"
+  },
+  {
+    id: "leonardo-ai",
+    name: "Leonardo AI",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://leonardo.ai/news/"
+  },
+  {
+    id: "ideogram-blog",
+    name: "Ideogram",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://about.ideogram.ai/"
+  },
+  {
+    id: "krea-blog",
+    name: "Krea AI",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://www.krea.ai/blog"
+  },
+  {
+    id: "recraft-blog",
+    name: "Recraft",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://www.recraft.ai/blog"
+  },
+  {
+    id: "smashing-magazine",
+    name: "Smashing Magazine",
+    categoryHint: "AI Design",
+    rss: "https://www.smashingmagazine.com/feed/",
+    homepage: "https://www.smashingmagazine.com/"
   }
 ];
 

@@ -20,7 +20,37 @@ const CATEGORY_KEYWORDS = {
   "Robotics": ["robot", "robotics", "embodied"],
   "AI Video": ["video", "sora", "generation video"],
   "AI Image": ["image", "diffusion", "vision", "text-to-image"],
-  "AI Design": ["design", "figma", "canva", "adobe", "framer", "ux", "ui", "prototype", "wireframe", "creative", "brand", "logo", "illustration"]
+  "AI Design": [
+    "design",
+    "figma",
+    "canva",
+    "adobe",
+    "framer",
+    "webflow",
+    "spline",
+    "sketch",
+    "runway",
+    "midjourney",
+    "stability",
+    "stable diffusion",
+    "leonardo",
+    "ideogram",
+    "krea",
+    "recraft",
+    "firefly",
+    "ux",
+    "ui",
+    "prototype",
+    "wireframe",
+    "creative",
+    "brand",
+    "logo",
+    "illustration",
+    "generative art",
+    "text-to-image",
+    "image generation",
+    "video generation"
+  ]
 };
 
 function inferCategory(item) {

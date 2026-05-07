@@ -71,7 +71,7 @@ export function renderHtml(newsItems, meta) {
     <section class="mb-10">
       <div class="flex items-center justify-between mb-3">
         <h2 class="text-xl font-semibold" data-i18n="designSpotlight">Design Spotlight</h2>
-        <span class="text-xs text-slate-500" data-i18n="designSpotlightHint">Figma, Canva, Adobe, Framer</span>
+        <span class="text-xs text-slate-500" data-i18n="designSpotlightHint">Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +</span>
       </div>
       <div id="designSpotlight" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </section>
@@ -96,7 +96,7 @@ export function renderHtml(newsItems, meta) {
         topFive: "Daily Top 5",
         rankingTrend: "Ranking Trend",
         designSpotlight: "Design Spotlight",
-        designSpotlightHint: "Figma, Canva, Adobe, Framer",
+        designSpotlightHint: "Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +",
         designEmpty: "No design news yet today.",
         timeline: "AI Timeline",
         openArticle: "Open article →",
@@ -117,7 +117,7 @@ export function renderHtml(newsItems, meta) {
         topFive: "Top 5 giornaliera",
         rankingTrend: "Trend ranking",
         designSpotlight: "Vetrina Design",
-        designSpotlightHint: "Figma, Canva, Adobe, Framer",
+        designSpotlightHint: "Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +",
         designEmpty: "Nessuna novità design oggi.",
         timeline: "Timeline AI",
         openArticle: "Apri articolo →",
@@ -162,7 +162,23 @@ export function renderHtml(newsItems, meta) {
     const mostImportant = document.getElementById("mostImportant");
     const trendBars = document.getElementById("trendBars");
     const designSpotlight = document.getElementById("designSpotlight");
-    const DESIGN_SOURCES = new Set(["Figma Blog", "Canva Newsroom", "Adobe Blog", "Framer Blog"]);
+    const DESIGN_SOURCES = new Set([
+      "Figma Blog",
+      "Canva Newsroom",
+      "Adobe Blog",
+      "Framer Blog",
+      "Webflow Blog",
+      "Spline",
+      "Sketch Blog",
+      "Runway",
+      "Midjourney Updates",
+      "Stability AI News",
+      "Leonardo AI",
+      "Ideogram",
+      "Krea AI",
+      "Recraft",
+      "Smashing Magazine"
+    ]);
 
     const sorted = [...rawData].sort((a, b) => b.score - a.score);
 
