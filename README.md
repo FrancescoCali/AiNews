@@ -74,8 +74,8 @@ Il file `data/news.json` contiene array di oggetti nel formato:
 
 ## Scheduling giornaliero 09:00
 
-- `parallel.workflow.json`: schedule `0 9 * * *` timezone `Europe/Rome`
-- `.github/workflows/daily-news.yml`: cron UTC equivalente (`0 7 * * *`), esegue pipeline e deploy GitHub Pages.
+- `parallel.workflow.json`: schedule `30 8 * * *` timezone `Europe/Rome`
+- `.github/workflows/daily-news.yml`: doppio cron UTC (`30 6 * * *` e `30 7 * * *`) per coprire ora legale e ora solare italiana (08:30 Italia).
 
 ## Ottimizzazioni implementate
 

@@ -2,7 +2,9 @@ name: Daily AI News
 
 on:
   schedule:
-    - cron: "0 7 * * *"
+    # 08:30 Italia: 06:30 UTC (ora legale CEST), 07:30 UTC (ora solare CET)
+    - cron: "30 6 * * *"
+    - cron: "30 7 * * *"
   workflow_dispatch:
 
 permissions:

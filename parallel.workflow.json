@@ -1,7 +1,7 @@
 {
   "name": "ai-news-daily-workflow",
   "description": "Daily AI news scraping, analysis and static build (free mode).",
-  "schedule": "0 9 * * *",
+  "schedule": "30 8 * * *",
   "timezone": "Europe/Rome",
   "steps": [
     {
