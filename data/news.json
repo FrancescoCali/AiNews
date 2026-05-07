@@ -1,35 +1,21 @@
 [
   {
-    "title": "News",
+    "title": "May 6, 2026AnnouncementsHigher usage limits for Claude and a compute deal with SpaceX",
     "source": "Anthropic News",
-    "url": "https://www.anthropic.com/news",
-    "summary": "News - aggiornamento pubblicato da Anthropic News.",
+    "url": "https://www.anthropic.com/news/higher-limits-spacex",
+    "summary": "May 6, 2026AnnouncementsHigher usage limits for Claude and a compute deal with SpaceX - aggiornamento pubblicato da Anthropic News.",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
-      "news"
-    ]
-  },
-  {
-    "title": "Newsroom",
-    "source": "Anthropic News",
-    "url": "mailto:press@anthropic.com",
-    "summary": "Our latest Opus modello brings stronger performance across coding, agenti, vision, and multi-step tasks, with greater thoroughness and consistency on the work that matters most.",
-    "score": 10,
-    "category": "Coding AI",
-    "date": "2026-05-06T12:36:24.372Z",
-    "image": null,
-    "keywords": [
-      "newsroom",
-      "latest",
-      "opus",
-      "model",
-      "brings",
-      "stronger",
-      "performance",
-      "across"
+      "2026announcementshigher",
+      "usage",
+      "limits",
+      "claude",
+      "compute",
+      "deal",
+      "spacex"
     ]
   },
   {
@@ -39,7 +25,7 @@
     "summary": "May 5, 2026AnnouncementsAgents for financial services - aggiornamento pubblicato da Anthropic News.",
     "score": 10,
     "category": "Coding AI",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
       "2026announcementsagents",
@@ -54,7 +40,7 @@
     "summary": "May 4, 2026AnnouncementsBuilding a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs - aggiornamento pubblicato da Anthropic News.",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
       "2026announcementsbuilding",
@@ -74,7 +60,7 @@
     "summary": "Apr 28, 2026AnnouncementsClaude for Creative Work - aggiornamento pubblicato da Anthropic News.",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.373Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
       "2026announcementsclaude",
@@ -83,16 +69,58 @@
     ]
   },
   {
-    "title": "Research",
+    "title": "Apr 27, 2026AnnouncementsAnthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
     "source": "Anthropic News",
-    "url": "https://www.anthropic.com/research",
-    "summary": "Research - aggiornamento pubblicato da Anthropic News.",
-    "score": 9,
+    "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+    "summary": "Apr 27, 2026AnnouncementsAnthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office - aggiornamento pubblicato da Anthropic News.",
+    "score": 10,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
-      "research"
+      "2026announcementsanthropic",
+      "names",
+      "theo",
+      "hourmouzis",
+      "general",
+      "manager",
+      "australia",
+      "zealand"
+    ]
+  },
+  {
+    "title": "Apr 24, 2026AnnouncementsAn update on our election safeguards",
+    "source": "Anthropic News",
+    "url": "https://www.anthropic.com/news/election-safeguards-update",
+    "summary": "Apr 24, 2026AnnouncementsAn update on our election safeguards - aggiornamento pubblicato da Anthropic News.",
+    "score": 10,
+    "category": "LLM",
+    "date": "2026-05-07T08:48:38.758Z",
+    "image": null,
+    "keywords": [
+      "2026announcementsan",
+      "update",
+      "election",
+      "safeguards"
+    ]
+  },
+  {
+    "title": "Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce",
+    "source": "Anthropic News",
+    "url": "https://www.anthropic.com/news/anthropic-nec",
+    "summary": "Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce - aggiornamento pubblicato da Anthropic News.",
+    "score": 10,
+    "category": "LLM",
+    "date": "2026-05-07T08:48:38.758Z",
+    "image": null,
+    "keywords": [
+      "2026announcementsanthropic",
+      "collaborate",
+      "build",
+      "japan",
+      "largest",
+      "engineering",
+      "workforce"
     ]
   },
   {
@@ -102,39 +130,11 @@
     "summary": "Economic Futures - aggiornamento pubblicato da Anthropic News.",
     "score": 9,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.757Z",
     "image": null,
     "keywords": [
       "economic",
       "futures"
-    ]
-  },
-  {
-    "title": "press@anthropic.com",
-    "source": "Anthropic News",
-    "url": "mailto:press@anthropic.com",
-    "summary": "press@anthropic.com - aggiornamento pubblicato da Anthropic News.",
-    "score": 9,
-    "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
-    "image": null,
-    "keywords": [
-      "press",
-      "anthropic"
-    ]
-  },
-  {
-    "title": "support@anthropic.com",
-    "source": "Anthropic News",
-    "url": "mailto:support@anthropic.com",
-    "summary": "support@anthropic.com - aggiornamento pubblicato da Anthropic News.",
-    "score": 9,
-    "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
-    "image": null,
-    "keywords": [
-      "support",
-      "anthropic"
     ]
   },
   {
@@ -144,11 +144,31 @@
     "summary": "Download press kit - aggiornamento pubblicato da Anthropic News.",
     "score": 9,
     "category": "LLM",
-    "date": "2026-05-06T12:36:24.372Z",
+    "date": "2026-05-07T08:48:38.758Z",
     "image": null,
     "keywords": [
       "download",
       "press"
+    ]
+  },
+  {
+    "title": "Introducing ChatGPT Futures: Class of 2026",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
+    "score": 8,
+    "category": "LLM",
+    "date": "2026-05-06T00:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "chatgpt",
+      "futures",
+      "class",
+      "2026",
+      "introducing",
+      "meet",
+      "student",
+      "innovators"
     ]
   },
   {
@@ -212,40 +232,19 @@
     ]
   },
   {
-    "title": "The next phase of the Microsoft OpenAI partnership",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/next-phase-of-microsoft-partnership",
-    "summary": "OpenAI and Microsoft announce an amended agreement that simplifies the partnership, adds long-term clarity, and supports continued AI innovation at scale.",
+    "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
+    "source": "HuggingFace",
+    "url": "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
+    "summary": "vLLM V0 to V1: Correctness Before Corrections in RL - aggiornamento pubblicato da HuggingFace.",
     "score": 8,
     "category": "LLM",
-    "date": "2026-04-27T06:00:00.000Z",
+    "date": "2026-05-06T19:06:55.000Z",
     "image": null,
     "keywords": [
-      "microsoft",
-      "openai",
-      "partnership",
-      "next",
-      "phase",
-      "announce",
-      "amended",
-      "agreement"
-    ]
-  },
-  {
-    "title": "Adding Benchmaxxer Repellant to the Open ASR Leaderboard",
-    "source": "HuggingFace",
-    "url": "https://huggingface.co/blog/open-asr-leaderboard-private-data",
-    "summary": "Adding Benchmaxxer Repellant to the Open ASR Leaderboard - aggiornamento pubblicato da HuggingFace.",
-    "score": 8,
-    "category": "Benchmark",
-    "date": "2026-05-06T00:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "adding",
-      "benchmaxxer",
-      "repellant",
-      "open",
-      "leaderboard"
+      "vllm",
+      "correctness",
+      "before",
+      "corrections"
     ]
   },
   {
@@ -269,283 +268,283 @@
     ]
   },
   {
-    "title": "Summarize Text Online – Free AI Summarizer",
+    "title": "Mapping Project Complexity with AI",
     "source": "Hacker News AI",
-    "url": "https://www.wps.com/tools/ai-summarizer/",
-    "summary": "Segnalazione da Hacker News AI: Summarize Text Online – Free AI Summarizer.",
+    "url": "https://www.maiobarbero.dev/articles/project-complexity-ai-skills/",
+    "summary": "Segnalazione da Hacker News AI: Mapping Project Complexity with AI.",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T12:23:31.000Z",
+    "date": "2026-05-07T08:32:55.000Z",
     "image": null,
     "keywords": [
       "https",
       "comments",
-      "summarize",
-      "text",
-      "online",
-      "free",
-      "summarizer",
-      "article"
-    ]
-  },
-  {
-    "title": "If AI is so great, why isn't it working?",
-    "source": "Hacker News AI",
-    "url": "https://twitter.com/vasuman/status/2049659161005470071",
-    "summary": "Segnalazione da Hacker News AI: If AI is so great, why isn't it working?.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T12:14:36.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "great",
-      "working",
+      "mapping",
+      "project",
+      "complexity",
       "article",
-      "twitter",
-      "vasuman",
-      "status"
+      "maiobarbero",
+      "articles"
     ]
   },
   {
-    "title": "Building AI Agents with Claude in Google Cloud's Vertex AI – Code with Claude [video]",
+    "title": "AI Agent Drained for $200K with This One Tweet Hack",
     "source": "Hacker News AI",
-    "url": "https://www.youtube.com/watch?v=TUysIAtxyrQ",
-    "summary": "Segnalazione da Hacker News AI: Building AI Agents with Claude in Google Cloud's Vertex AI – Code with Claude [video].",
+    "url": "https://www.ccn.com/news/crypto/ai-agent-drained-for-200k-with-this-one-tweet-hack-heres-how/",
+    "summary": "Segnalazione da Hacker News AI: AI Agent Drained for $200K with This One Tweet Hack.",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T12:00:29.000Z",
-    "image": null,
-    "keywords": [
-      "claude",
-      "https",
-      "comments",
-      "building",
-      "agents",
-      "google",
-      "cloud",
-      "vertex"
-    ]
-  },
-  {
-    "title": "AI Is Forcing CEOs to Make a Stark Choice: Lay Off Workers or Make Them Do More",
-    "source": "Hacker News AI",
-    "url": "https://www.wsj.com/tech/ai/ai-is-forcing-ceos-to-make-a-stark-choice-lay-off-workers-or-make-them-do-more-6b1ed771",
-    "summary": "Segnalazione da Hacker News AI: AI Is Forcing CEOs to Make a Stark Choice: Lay Off Workers or Make Them Do More.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T11:49:01.000Z",
-    "image": null,
-    "keywords": [
-      "make",
-      "https",
-      "comments",
-      "forcing",
-      "ceos",
-      "stark",
-      "choice",
-      "workers"
-    ]
-  },
-  {
-    "title": "The layoffs will continue till we learn to use AI",
-    "source": "Hacker News AI",
-    "url": "https://twitter.com/championswimmer/status/2051807284691612099",
-    "summary": "Segnalazione da Hacker News AI: The layoffs will continue till we learn to use AI.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T11:44:15.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "layoffs",
-      "continue",
-      "till",
-      "learn",
-      "article",
-      "twitter"
-    ]
-  },
-  {
-    "title": "Supercomputer networking to accelerate large scale AI training",
-    "source": "Hacker News AI",
-    "url": "https://openai.com/index/mrc-supercomputer-networking/",
-    "summary": "Segnalazione da Hacker News AI: Supercomputer networking to accelerate large scale AI training.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T11:39:26.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "supercomputer",
-      "networking",
-      "accelerate",
-      "large",
-      "scale",
-      "training"
-    ]
-  },
-  {
-    "title": "Stop Sending IDE-Catchable AI Code Errors to Review",
-    "source": "Hacker News AI",
-    "url": "https://blog.jetbrains.com/ai/2026/05/stop-sending-ide-catchable-ai-code-errors-to-review/",
-    "summary": "Segnalazione da Hacker News AI: Stop Sending IDE-Catchable AI Code Errors to Review.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T11:36:52.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "stop",
-      "sending",
-      "ide-catchable",
-      "code",
-      "errors",
-      "review"
-    ]
-  },
-  {
-    "title": "Show HN: ContextWizard – AI context manager with undo and drag-drop",
-    "source": "Hacker News AI",
-    "url": "https://chromewebstore.google.com/",
-    "summary": "Segnalazione da Hacker News AI: Show HN: ContextWizard – AI context manager with undo and drag-drop.",
-    "score": 8,
-    "category": "LLM",
-    "date": "2026-05-06T11:29:19.000Z",
-    "image": null,
-    "keywords": [
-      "manager",
-      "contextwizard",
-      "context",
-      "undo",
-      "bookmark",
-      "comments",
-      "show",
-      "drag-drop"
-    ]
-  },
-  {
-    "title": "Apple Will Pay $250M to Settle Lawsuit over Siri's AI Features",
-    "source": "Hacker News AI",
-    "url": "https://www.wired.com/story/apple-will-pay-dollar250-million-to-settle-lawsuit-over-siris-ai-features/",
-    "summary": "Segnalazione da Hacker News AI: Apple Will Pay $250M to Settle Lawsuit over Siri's AI Features.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T11:01:51.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "apple",
-      "250m",
-      "settle",
-      "lawsuit",
-      "over",
-      "siri"
-    ]
-  },
-  {
-    "title": "Are you addicted to your AI chatbot?",
-    "source": "Hacker News AI",
-    "url": "https://science.ubc.ca/news/2026-04/are-you-addicted-your-ai-chatbot-it-might-be-design",
-    "summary": "Segnalazione da Hacker News AI: Are you addicted to your AI chatbot?.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-06T10:57:21.000Z",
+    "date": "2026-05-07T08:18:31.000Z",
     "image": null,
     "keywords": [
       "https",
       "news",
       "comments",
-      "addicted",
-      "chatbot",
-      "article",
-      "science",
-      "2026-04"
+      "agent",
+      "drained",
+      "200k",
+      "tweet",
+      "hack"
     ]
   },
   {
-    "title": "Programming Is Real Engineering, and AI Proves It",
+    "title": "15 things I learnt launching AI projects in Government (4-part blog post)",
     "source": "Hacker News AI",
-    "url": "https://jerf.org/iri/post/2026/programming_is_engineering/",
-    "summary": "Segnalazione da Hacker News AI: Programming Is Real Engineering, and AI Proves It.",
+    "url": "https://puntofisso.net/blog/posts/things-i-learned-ai-summary/",
+    "summary": "Segnalazione da Hacker News AI: 15 things I learnt launching AI projects in Government (4-part blog post).",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T10:36:39.000Z",
+    "date": "2026-05-07T08:08:36.000Z",
     "image": null,
     "keywords": [
-      "programming",
-      "engineering",
+      "blog",
       "https",
       "comments",
-      "real",
-      "proves",
-      "article",
-      "jerf"
+      "things",
+      "learnt",
+      "launching",
+      "projects",
+      "government"
     ]
   },
   {
-    "title": "AI collaboration as a laser cavity",
+    "title": "Ask HN: Do you understand all the code written by AI in your company?",
     "source": "Hacker News AI",
-    "url": "https://solitonmaths.substack.com/p/the-coherent-cavity",
-    "summary": "Segnalazione da Hacker News AI: AI collaboration as a laser cavity.",
+    "url": "https://news.ycombinator.com/item?id=48046617",
+    "summary": "Segnalazione da Hacker News AI: Ask HN: Do you understand all the code written by AI in your company?.",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T10:10:09.000Z",
+    "date": "2026-05-07T07:47:52.000Z",
     "image": null,
     "keywords": [
-      "https",
       "comments",
-      "collaboration",
-      "laser",
-      "cavity",
-      "article",
-      "solitonmaths",
-      "substack"
+      "understand",
+      "code",
+      "written",
+      "company",
+      "https",
+      "news",
+      "ycombinator"
     ]
   },
   {
-    "title": "What Is an AI SDR? How AI Sales Agents Work in 2026",
+    "title": "The Comparator in Clinical AI",
     "source": "Hacker News AI",
-    "url": "https://babuger.com/blog/what-is-an-ai-sdr-how-ai-sales-agents-work",
-    "summary": "Segnalazione da Hacker News AI: What Is an AI SDR? How AI Sales Agents Work in 2026.",
+    "url": "https://sparsethought.com/2026/05/03/science-paper/",
+    "summary": "Segnalazione da Hacker News AI: The Comparator in Clinical AI.",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T10:05:15.000Z",
+    "date": "2026-05-07T07:44:35.000Z",
     "image": null,
     "keywords": [
       "https",
       "comments",
-      "sales",
+      "comparator",
+      "clinical",
+      "article",
+      "sparsethought",
+      "2026",
+      "science-paper"
+    ]
+  },
+  {
+    "title": "Symposium makes Rust dependencies actionable for AI agents",
+    "source": "Hacker News AI",
+    "url": "https://symposium.dev/",
+    "summary": "Segnalazione da Hacker News AI: Symposium makes Rust dependencies actionable for AI agents.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T07:35:24.000Z",
+    "image": null,
+    "keywords": [
+      "symposium",
+      "https",
+      "comments",
+      "makes",
+      "rust",
+      "dependencies",
+      "actionable",
+      "agents"
+    ]
+  },
+  {
+    "title": "Create Context Graph: Scaffold AI Agents with Graph Memory",
+    "source": "Hacker News AI",
+    "url": "https://medium.com/neo4j/introducing-create-context-graph-e6d40e2d55c7",
+    "summary": "Segnalazione da Hacker News AI: Create Context Graph: Scaffold AI Agents with Graph Memory.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T07:35:18.000Z",
+    "image": null,
+    "keywords": [
+      "graph",
+      "https",
+      "comments",
+      "create",
+      "context",
+      "scaffold",
       "agents",
-      "work",
-      "2026",
-      "article",
-      "babuger"
+      "memory"
     ]
   },
   {
-    "title": "Agentic AI Community 2026",
+    "title": "Would Lojban Enable AI (2005)",
     "source": "Hacker News AI",
-    "url": "https://simplai.ai/simplai-university",
-    "summary": "Segnalazione da Hacker News AI: Agentic AI Community 2026.",
+    "url": "https://wiki.c2.com/?HowWouldLojbanEnableAi",
+    "summary": "Segnalazione da Hacker News AI: Would Lojban Enable AI (2005).",
     "score": 8,
     "category": "Coding AI",
-    "date": "2026-05-06T09:53:42.000Z",
+    "date": "2026-05-07T07:27:29.000Z",
     "image": null,
     "keywords": [
       "https",
       "comments",
-      "agentic",
-      "community",
-      "2026",
+      "would",
+      "lojban",
+      "enable",
+      "2005",
       "article",
-      "simplai",
-      "simplai-university"
+      "wiki"
+    ]
+  },
+  {
+    "title": "Null loop solves AI Model Collapse",
+    "source": "Hacker News AI",
+    "url": "https://medium.com/@magass139/updated-preservation-necessity-2255dddb363b",
+    "summary": "Segnalazione da Hacker News AI: Null loop solves AI Model Collapse.",
+    "score": 8,
+    "category": "LLM",
+    "date": "2026-05-07T07:09:25.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "null",
+      "loop",
+      "solves",
+      "model",
+      "collapse",
+      "article"
+    ]
+  },
+  {
+    "title": "Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders",
+    "source": "Hacker News AI",
+    "url": "https://deepviews.xyz/research/ai-vc-landscape-en",
+    "summary": "Segnalazione da Hacker News AI: Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T07:00:23.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "show",
+      "landscape",
+      "deals",
+      "mapped",
+      "stage",
+      "geography"
+    ]
+  },
+  {
+    "title": "AI, Constraints, and the Future of Software Engineering",
+    "source": "Hacker News AI",
+    "url": "https://medium.com/analytics-and-data/ai-constraints-and-the-future-of-software-engineering-9ae33c9f1cb7",
+    "summary": "Segnalazione da Hacker News AI: AI, Constraints, and the Future of Software Engineering.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T06:58:43.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "constraints",
+      "future",
+      "software",
+      "engineering",
+      "article",
+      "medium"
+    ]
+  },
+  {
+    "title": "Stackit and neuland.ai aim to provide LLMs in European data centers",
+    "source": "Hacker News AI",
+    "url": "https://www.heise.de/en/news/Sovereign-AI-from-Germany-11284778.html",
+    "summary": "Segnalazione da Hacker News AI: Stackit and neuland.ai aim to provide LLMs in European data centers.",
+    "score": 8,
+    "category": "LLM",
+    "date": "2026-05-07T06:53:36.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "news",
+      "comments",
+      "stackit",
+      "neuland",
+      "provide",
+      "llms",
+      "european"
+    ]
+  },
+  {
+    "title": "The \"AI Job Apocalypse\" is a complete fantasy",
+    "source": "Hacker News AI",
+    "url": "https://www.a16z.news/p/the-ai-job-apocalypse-is-a-complete",
+    "summary": "Segnalazione da Hacker News AI: The \"AI Job Apocalypse\" is a complete fantasy.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T06:35:58.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "news",
+      "comments",
+      "apocalypse",
+      "complete",
+      "fantasy",
+      "article",
+      "a16z"
+    ]
+  },
+  {
+    "title": "Architectural Framework for Agentic AI in Identity and Eligibility",
+    "source": "Hacker News AI",
+    "url": "https://wwps.microsoft.com/content/agentic-ai-identity-eligibility/",
+    "summary": "Segnalazione da Hacker News AI: Architectural Framework for Agentic AI in Identity and Eligibility.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T06:10:39.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "architectural",
+      "framework",
+      "agentic",
+      "identity",
+      "eligibility",
+      "article"
     ]
   },
   {
@@ -684,20 +683,63 @@
     ]
   },
   {
-    "title": "GPT-5.5 Instant System Card",
+    "title": "How frontier enterprises are building an AI advantage",
     "source": "OpenAI Blog",
-    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
-    "summary": "GPT-5.5 Instant System Card - aggiornamento pubblicato da OpenAI Blog.",
+    "url": "https://openai.com/index/introducing-b2b-signals",
+    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
     "score": 7,
-    "category": "LLM",
-    "date": "2026-05-05T10:00:00.000Z",
+    "category": "Coding AI",
+    "date": "2026-05-06T00:00:00.000Z",
     "image": null,
     "keywords": [
-      "gpt-5",
-      "instant",
-      "system",
-      "card",
-      "safety"
+      "frontier",
+      "enterprises",
+      "advantage",
+      "building",
+      "openai",
+      "signals",
+      "research",
+      "shows"
+    ]
+  },
+  {
+    "title": "Uber uses OpenAI to help people earn smarter and book faster",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/uber",
+    "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace.",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-06T00:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "uber",
+      "uses",
+      "openai",
+      "help",
+      "earn",
+      "smarter",
+      "book",
+      "faster"
+    ]
+  },
+  {
+    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/singular-bank",
+    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
+    "score": 7,
+    "category": "LLM",
+    "date": "2026-05-06T00:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "singular",
+      "bank",
+      "bankers",
+      "chatgpt",
+      "codex",
+      "helps",
+      "move",
+      "fast"
     ]
   },
   {
@@ -718,6 +760,23 @@
       "updates",
       "chatgpt",
       "default"
+    ]
+  },
+  {
+    "title": "GPT-5.5 Instant System Card",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+    "summary": "GPT-5.5 Instant System Card - aggiornamento pubblicato da OpenAI Blog.",
+    "score": 7,
+    "category": "LLM",
+    "date": "2026-05-05T10:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "gpt-5",
+      "instant",
+      "system",
+      "card",
+      "safety"
     ]
   },
   {
@@ -821,63 +880,20 @@
     ]
   },
   {
-    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/openai-on-aws",
-    "summary": "OpenAI GPT modellos, Codex, and Managed agenti are ora disponibile on AWS, enabling enterprises to build secure AI in their AWS environments.",
+    "title": "Adding Benchmaxxer Repellant to the Open ASR Leaderboard",
+    "source": "HuggingFace",
+    "url": "https://huggingface.co/blog/open-asr-leaderboard-private-data",
+    "summary": "Adding Benchmaxxer Repellant to the Open ASR Leaderboard - aggiornamento pubblicato da HuggingFace.",
     "score": 7,
-    "category": "LLM",
-    "date": "2026-04-28T00:00:00.000Z",
+    "category": "Benchmark",
+    "date": "2026-05-06T00:00:00.000Z",
     "image": null,
     "keywords": [
-      "openai",
-      "models",
-      "codex",
-      "managed",
-      "agents",
-      "come",
-      "available",
-      "enabling"
-    ]
-  },
-  {
-    "title": "OpenAI available at FedRAMP Moderate",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
-    "summary": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
-    "score": 7,
-    "category": "LLM",
-    "date": "2026-04-27T14:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "openai",
-      "available",
-      "fedramp",
-      "moderate",
-      "authorization",
-      "chatgpt",
-      "enterprise",
-      "enabling"
-    ]
-  },
-  {
-    "title": "An open-source spec for orchestration: Symphony",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
-    "summary": "scopri come Symphony, an open source spec for Codex orchestration, turns issue trackers into always-on agent systems—boosting engineering output and reducing context switching.",
-    "score": 7,
-    "category": "Coding AI",
-    "date": "2026-04-27T00:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "open-source",
-      "spec",
-      "orchestration",
-      "symphony",
-      "engineering",
-      "learn",
-      "codex",
-      "turns"
+      "adding",
+      "benchmaxxer",
+      "repellant",
+      "open",
+      "leaderboard"
     ]
   },
   {
@@ -1005,41 +1021,179 @@
     ]
   },
   {
-    "title": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs",
-    "source": "HuggingFace",
-    "url": "https://huggingface.co/blog/waypoint-1-5",
-    "summary": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs - aggiornamento pubblicato da HuggingFace.",
+    "title": "Show HN: Imagev2.me – Tired of juggling AI image subs, so I built one studio",
+    "source": "Hacker News AI",
+    "url": "https://imagev2.me/",
+    "summary": "Segnalazione da Hacker News AI: Show HN: Imagev2.me – Tired of juggling AI image subs, so I built one studio.",
     "score": 7,
-    "category": "Coding AI",
-    "date": "2026-04-09T00:00:00.000Z",
+    "category": "AI Image",
+    "date": "2026-05-07T08:23:21.000Z",
     "image": null,
     "keywords": [
-      "waypoint-1",
-      "higher-fidelity",
-      "interactive",
-      "worlds",
-      "everyday",
-      "gpus"
+      "imagev2",
+      "https",
+      "comments",
+      "show",
+      "tired",
+      "juggling",
+      "image",
+      "subs"
     ]
   },
   {
-    "title": "AI as a Mirror of Cognition: Compression, Prediction, and Semantic Drift [pdf]",
-    "source": "Hacker News AI",
-    "url": "https://github.com/therealitydrift/cognitive-drift-institute/blob/main/03_Research_and_Papers/03_%20Cognitive_Drift_Series/02_%20Cognitive_Drift_Series/cd-4.1-ai-mirror-compression-recursion.pdf",
-    "summary": "Segnalazione da Hacker News AI: AI as a Mirror of Cognition: Compression, Prediction, and Semantic Drift [pdf].",
+    "title": "Anthropic just partnered with SpaceX and doubled Claude Code rate limits effective today",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5l92i/anthropic_just_partnered_with_spacex_and_doubled/",
+    "summary": "Anthropic just partnered with SpaceX and doubled Claude Code rate limits effective today Big news dropped this morning. Anthropic signed a deal to use all compute capacity at SpaceX's Colossus 1 data center. That's 300+ megawatts and over 2",
     "score": 7,
-    "category": "Open Source",
-    "date": "2026-05-06T11:26:50.000Z",
+    "category": "Coding AI",
+    "date": "2026-05-06T18:20:46.000Z",
     "image": null,
     "keywords": [
-      "drift",
-      "https",
-      "20cognitive",
-      "series",
-      "comments",
-      "mirror",
-      "cognition",
-      "compression"
+      "claude",
+      "limits",
+      "code",
+      "rate",
+      "spacex",
+      "doubled",
+      "anthropic",
+      "today"
+    ]
+  },
+  {
+    "title": "Spent two days at the AI Agents Conference in NYC. Most of the companies there were betting on the wrong moat.",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5ewzi/spent_two_days_at_the_ai_agents_conference_in_nyc/",
+    "summary": "One speaker (a VC) said his number for evaluating AI-native startups is ARR per engineer, and that the number ought to be going up. Almost every talk and every booth at the AI agenti Conference was selling a fix for something that broke thi",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-06T14:41:07.000Z",
+    "image": null,
+    "keywords": [
+      "actually",
+      "agents",
+      "most",
+      "data",
+      "engineering",
+      "prompt",
+      "companies",
+      "going"
+    ]
+  },
+  {
+    "title": "Anthropic researchers detail “model spec midtraining”, which adds a stage between pretraining and fine-tuning to improve generalization from alignment training",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5zoq4/anthropic_researchers_detail_model_spec/",
+    "summary": "submitted by /u/tekz [link] [comments]",
+    "score": 7,
+    "category": "LLM",
+    "date": "2026-05-07T04:06:31.000Z",
+    "image": null,
+    "keywords": [
+      "anthropic",
+      "researchers",
+      "detail",
+      "model",
+      "spec",
+      "midtraining",
+      "which",
+      "adds"
+    ]
+  },
+  {
+    "title": "I am not an \"anti\" like this guy, but still an interesting video of person interacting with chat 4o",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t62nnm/i_am_not_an_anti_like_this_guy_but_still_an/",
+    "summary": "(Posting Here because removed by Chatgpt Complaints moderators because the modello here is 4o, and refuse to believe there were any safety issues about that modello)He started off with claiming to chat was the smartest baby born and faked e",
+    "score": 7,
+    "category": "LLM",
+    "date": "2026-05-07T06:45:58.000Z",
+    "image": null,
+    "keywords": [
+      "chat",
+      "here",
+      "because",
+      "model",
+      "anti",
+      "like",
+      "still",
+      "interesting"
+    ]
+  },
+  {
+    "title": "Healthcare AI Is Absorbing Institutional Knowledge It Can't Actually Hold",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5y2bc/healthcare_ai_is_absorbing_institutional/",
+    "summary": "Investors | Founders | Operators It's tricky when you're responsible for people, especially in the healthcare sector, and you include AI into the infrastructure in a way that puts the livelihood of those people at risk. One of the more rece",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-07T02:49:00.000Z",
+    "image": null,
+    "keywords": [
+      "healthcare",
+      "people",
+      "knowledge",
+      "those",
+      "risk",
+      "there",
+      "system",
+      "absorbing"
+    ]
+  },
+  {
+    "title": "Month later, qubic still reads to me like an unresolved compute-access experiment",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t62qw6/month_later_qubic_still_reads_to_me_like_an/",
+    "summary": "A month back i was trying to figure out whether qubic was doing something genuinely novel or just wrapping distributed hardware incentives in a more interesting story. After sitting with it longer, one side of that question has gotten clear",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-07T06:51:19.000Z",
+    "image": null,
+    "keywords": [
+      "qubic",
+      "side",
+      "whether",
+      "something",
+      "genuinely",
+      "month",
+      "still",
+      "hardware"
+    ]
+  },
+  {
+    "title": "We built a way for two people's AI context to talk to each other (without sharing their conversations)",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t6431v/we_built_a_way_for_two_peoples_ai_context_to_talk/",
+    "summary": "We've been thinking about how we use AI in our relationships. Big part of it is about other people. Talking about them, figuring out what to say to them, understanding why they did this and that. So AI or LLMs build up this picture of the p",
+    "score": 7,
+    "category": "LLM",
+    "date": "2026-05-07T08:10:07.000Z",
+    "image": null,
+    "keywords": [
+      "people",
+      "other",
+      "each",
+      "they",
+      "just",
+      "built",
+      "talk",
+      "sharing"
+    ]
+  },
+  {
+    "title": "Context Usage Breakdown",
+    "source": "Cursor Changelog",
+    "url": "https://cursor.com/changelog/05-06-26",
+    "summary": "You can now see a breakdown of your agent's context usage .",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-06T00:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "context",
+      "usage",
+      "breakdown",
+      "agent"
     ]
   },
   {
@@ -1180,26 +1334,6 @@
     ]
   },
   {
-    "title": "Cursor in JetBrains IDEs",
-    "source": "Cursor Changelog",
-    "url": "https://cursor.com/changelog/03-04-26",
-    "summary": "Cursor is ora disponibile in IntelliJ IDEA, PyCharm, WebStorm, and other JetBrains IDEs through the Agent Client Protocol (ACP).",
-    "score": 7,
-    "category": "Coding AI",
-    "date": "2026-03-04T00:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "cursor",
-      "jetbrains",
-      "ides",
-      "available",
-      "intellij",
-      "idea",
-      "pycharm",
-      "webstorm"
-    ]
-  },
-  {
     "title": "Cybersecurity in the Intelligence Age",
     "source": "OpenAI Blog",
     "url": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
@@ -1298,6 +1432,164 @@
       "hcompany",
       "browser",
       "companion"
+    ]
+  },
+  {
+    "title": "Leave it up to Claude",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5xaix/leave_it_up_to_claude/",
+    "summary": "submitted by /u/TheOnlyVibemaster [link] [comments]",
+    "score": 6,
+    "category": "LLM",
+    "date": "2026-05-07T02:13:44.000Z",
+    "image": null,
+    "keywords": [
+      "leave",
+      "claude",
+      "submitted",
+      "theonlyvibemaster",
+      "link",
+      "comments"
+    ]
+  },
+  {
+    "title": "AI Podcasts made learning economics way less painful for me",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5q6pd/ai_podcasts_made_learning_economics_way_less/",
+    "summary": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2",
+    "score": 6,
+    "category": "Agentic AI",
+    "date": "2026-05-06T21:16:43.000Z",
+    "image": null,
+    "keywords": [
+      "less",
+      "like",
+      "learning",
+      "economics",
+      "feels",
+      "made",
+      "painful",
+      "honestly"
+    ]
+  },
+  {
+    "title": "Pennsylvania sues Character.AI chatbot posing as doctor, giving psych advice",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5ewxa/pennsylvania_sues_characterai_chatbot_posing_as/",
+    "summary": "submitted by /u/sksarkpoes3 [link] [comments]",
+    "score": 6,
+    "category": "Agentic AI",
+    "date": "2026-05-06T14:41:03.000Z",
+    "image": null,
+    "keywords": [
+      "pennsylvania",
+      "sues",
+      "character",
+      "chatbot",
+      "posing",
+      "doctor",
+      "giving",
+      "psych"
+    ]
+  },
+  {
+    "title": "Be honest: How much of \"Claude Mythos\" is just hype?",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5ibwc/be_honest_how_much_of_claude_mythos_is_just_hype/",
+    "summary": "I see people claiming Claude Mythos is the \"final form\" of LLM creativity, but I’m struggling to see the actual reach it might have. What does it do that a well-crafted system prompt on base Claude can't? Do you actually believe it will cha",
+    "score": 6,
+    "category": "LLM",
+    "date": "2026-05-06T16:42:03.000Z",
+    "image": null,
+    "keywords": [
+      "claude",
+      "mythos",
+      "just",
+      "honest",
+      "much",
+      "hype",
+      "people",
+      "claiming"
+    ]
+  },
+  {
+    "title": "Average Claude experience:",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5rfqc/average_claude_experience/",
+    "summary": "Me: Sup? Claude: Good Also Claude: Upgrade to keep chatting, you hit your message limit. It resets at 5:10 pm, or you can upgrade for higher limits. submitted by /u/FN__FAL [link] [comments]",
+    "score": 6,
+    "category": "LLM",
+    "date": "2026-05-06T22:03:19.000Z",
+    "image": null,
+    "keywords": [
+      "claude",
+      "upgrade",
+      "average",
+      "experience",
+      "good",
+      "also",
+      "keep",
+      "chatting"
+    ]
+  },
+  {
+    "title": "Cheat Engine with AI ?! has anyone tried Wand yet?",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5uvd1/cheat_engine_with_ai_has_anyone_tried_wand_yet/",
+    "summary": "cheapywin I found this site called Wand, and honestly I’m not really sure what to think. At first glance it looks like some kind of Cheat Engine / WeMod thing, but packaged better and with an AI layer on top. In-game assists, XP boosts, res",
+    "score": 6,
+    "category": "Coding AI",
+    "date": "2026-05-07T00:25:44.000Z",
+    "image": null,
+    "keywords": [
+      "cheat",
+      "engine",
+      "anyone",
+      "tried",
+      "wand",
+      "like",
+      "some",
+      "games"
+    ]
+  },
+  {
+    "title": "How can I set up an LLM with voice chat. So I can talk to the LLM or ask it questions when working?",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5iyjm/how_can_i_set_up_an_llm_with_voice_chat_so_i_can/",
+    "summary": "How can I set up an LLM with voice chat. So I can talk to the LLM or ask it questions when working? Is there a special program or something that I can connect to an llm? submitted by /u/Eireagon [link] [comments]",
+    "score": 6,
+    "category": "LLM",
+    "date": "2026-05-06T17:03:34.000Z",
+    "image": null,
+    "keywords": [
+      "voice",
+      "chat",
+      "talk",
+      "questions",
+      "working",
+      "there",
+      "special",
+      "program"
+    ]
+  },
+  {
+    "title": "X user tricks Grok into sending them $200,000 in crypto using morse code",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t4cisv/x_user_tricks_grok_into_sending_them_200000_in/",
+    "summary": "\"Grok was then prompted on X to translate a Morse code message and pass it directly to Bankrbot. The decoded message instructed the bot to send 3 billion DRB tokens to a specific wallet address. The translated message was then treated as a ",
+    "score": 5,
+    "category": "Coding AI",
+    "date": "2026-05-05T11:22:11.000Z",
+    "image": null,
+    "keywords": [
+      "message",
+      "grok",
+      "morse",
+      "code",
+      "then",
+      "wallet",
+      "user",
+      "tricks"
     ]
   },
   {

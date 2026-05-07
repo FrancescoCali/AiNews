@@ -54,8 +54,9 @@ function extractImage(item, html = "") {
 
 function normalizeEntry(source, item) {
   const description = item.contentSnippet || item.summary || item.content || "";
-  const rawUrl = item.link || source.homepage;
-  const url = rawUrl && rawUrl.startsWith("http") ? rawUrl.split("#")[0] : rawUrl;
+  const rawUrl = item.link || item.guid || "";
+  if (!rawUrl || !rawUrl.startsWith("http")) return null;
+  const url = rawUrl.split("#")[0];
   return {
     title: item.title?.trim() || "Untitled",
     source: source.name,
@@ -71,13 +72,26 @@ function normalizeEntry(source, item) {
   };
 }
 
+function normalizeUrlForCompare(url = "") {
+  return url.toLowerCase().replace(/\/+$/, "").split("?")[0];
+}
+
+function isHomepageUrl(url, source) {
+  if (!url || !source?.homepage) return false;
+  return normalizeUrlForCompare(url) === normalizeUrlForCompare(source.homepage);
+}
+
 async function fetchWithFallback(source) {
   const rssAttempt = async () => {
     if (!source.rss) {
       throw new Error("No RSS configured");
     }
     const feed = await parser.parseURL(source.rss);
-    return (feed.items || []).slice(0, 15).map((item) => normalizeEntry(source, item));
+    return (feed.items || [])
+      .slice(0, 15)
+      .map((item) => normalizeEntry(source, item))
+      .filter(Boolean)
+      .filter((entry) => !isHomepageUrl(entry.url, source));
   };
 
   const htmlFallback = async () => {
@@ -89,11 +103,20 @@ async function fetchWithFallback(source) {
     const articles = [];
     $("article, .post, li").each((_, el) => {
       const title = $(el).find("h1,h2,h3,a").first().text().trim();
-      const link = $(el).find("a").first().attr("href");
+      const link = $(el).find("a[href]").first().attr("href");
       if (!title || !link) return;
-      const absLink = link.startsWith("http")
-        ? link
-        : new URL(link, source.homepage).toString();
+      let absLink;
+      try {
+        absLink = link.startsWith("http")
+          ? link
+          : new URL(link, source.homepage).toString();
+      } catch {
+        return;
+      }
+      absLink = absLink.split("#")[0];
+      if (!/^https?:\/\//i.test(absLink)) return;
+      if (isHomepageUrl(absLink, source)) return;
+
       const description = $(el).find("p").first().text().trim();
       articles.push({
         title,
@@ -141,10 +164,12 @@ export async function collectNews() {
     )
   );
 
+  const homepageSet = new Set(SOURCES.map((s) => normalizeUrlForCompare(s.homepage)));
   const dedupeSet = new Set();
   const items = perSource
     .flat()
     .filter((item) => isValidArticleUrl(item.url))
+    .filter((item) => !homepageSet.has(normalizeUrlForCompare(item.url)))
     .filter((item) => !isLikelyJunkTitle(item.title))
     .filter((item) => {
       const key = `${item.url}|${item.title}`.toLowerCase();

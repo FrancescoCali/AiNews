@@ -49,6 +49,20 @@
         "Enterprise AI": 3,
         "Open Source": 5
       }
+    },
+    {
+      "date": "2026-05-07T08:48:43.155Z",
+      "total": 99,
+      "topScore": 10,
+      "categories": {
+        "LLM": 33,
+        "Coding AI": 49,
+        "Agentic AI": 8,
+        "Enterprise AI": 3,
+        "Benchmark": 1,
+        "AI Image": 1,
+        "Open Source": 4
+      }
     }
   ]
 }
