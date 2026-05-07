@@ -89,6 +89,20 @@
         "AI Image": 1,
         "Open Source": 6
       }
+    },
+    {
+      "date": "2026-05-07T10:53:43.030Z",
+      "total": 121,
+      "topScore": 10,
+      "categories": {
+        "LLM": 26,
+        "Coding AI": 49,
+        "AI Design": 28,
+        "Agentic AI": 7,
+        "Enterprise AI": 4,
+        "AI Image": 1,
+        "Open Source": 6
+      }
     }
   ]
 }

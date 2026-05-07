@@ -19,7 +19,8 @@ const CATEGORY_KEYWORDS = {
   "Enterprise AI": ["enterprise", "business", "b2b", "compliance", "security"],
   "Robotics": ["robot", "robotics", "embodied"],
   "AI Video": ["video", "sora", "generation video"],
-  "AI Image": ["image", "diffusion", "vision", "text-to-image"]
+  "AI Image": ["image", "diffusion", "vision", "text-to-image"],
+  "AI Design": ["design", "figma", "canva", "adobe", "framer", "ux", "ui", "prototype", "wireframe", "creative", "brand", "logo", "illustration"]
 };
 
 function inferCategory(item) {

@@ -54,6 +54,34 @@ export const SOURCES = [
     categoryHint: "Agentic AI",
     rss: "https://changelog.langchain.com/feed.xml",
     homepage: "https://changelog.langchain.com/"
+  },
+  {
+    id: "figma-blog",
+    name: "Figma Blog",
+    categoryHint: "AI Design",
+    rss: "https://www.figma.com/blog/feed/",
+    homepage: "https://www.figma.com/blog/"
+  },
+  {
+    id: "canva-newsroom",
+    name: "Canva Newsroom",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://www.canva.com/newsroom/news/"
+  },
+  {
+    id: "adobe-blog",
+    name: "Adobe Blog",
+    categoryHint: "AI Design",
+    rss: "https://blog.adobe.com/en/feeds/all.xml",
+    homepage: "https://blog.adobe.com/en/topics/ai"
+  },
+  {
+    id: "framer-blog",
+    name: "Framer Blog",
+    categoryHint: "AI Design",
+    rss: null,
+    homepage: "https://www.framer.com/blog/"
   }
 ];
 
@@ -66,5 +94,6 @@ export const VALID_CATEGORIES = [
   "Enterprise AI",
   "Robotics",
   "AI Video",
-  "AI Image"
+  "AI Image",
+  "AI Design"
 ];

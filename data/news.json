@@ -8,7 +8,7 @@
     "summaryEn": "We’ve raised Claude's usage limits and agreed a new compute partnership with SpaceX that will substantially increase our capacity in the near term.",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
+    "date": "2026-05-07T10:53:12.254Z",
     "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Globe&backgroundColor=fig",
     "keywords": [
       "usage",
@@ -30,7 +30,7 @@
     "summaryEn": "We're releasing ten new Cowork and Claude Code plugins, integrations with the Microsoft 365 suite, new connectors, and an MCP app for financial services and insurance organizations.",
     "score": 10,
     "category": "Coding AI",
-    "date": "2026-05-07T09:07:38.633Z",
+    "date": "2026-05-07T10:53:12.254Z",
     "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node-GraphChart&backgroundColor=clay",
     "keywords": [
       "financial",
@@ -52,7 +52,7 @@
     "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
+    "date": "2026-05-07T10:53:12.254Z",
     "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20NodeLine&backgroundColor=cactus",
     "keywords": [
       "company",
@@ -66,72 +66,6 @@
     ]
   },
   {
-    "title": "Apr 28, 2026AnnouncementsClaude for Creative Work",
-    "source": "Anthropic News",
-    "url": "https://www.anthropic.com/news/claude-for-creative-work",
-    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "score": 10,
-    "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
-    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20ShapeArrow&backgroundColor=cactus",
-    "keywords": [
-      "2026announcementsclaude",
-      "creative",
-      "work",
-      "anthropic",
-      "safety",
-      "research",
-      "company",
-      "working"
-    ]
-  },
-  {
-    "title": "Apr 27, 2026AnnouncementsAnthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
-    "source": "Anthropic News",
-    "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
-    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "score": 10,
-    "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
-    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
-    "keywords": [
-      "2026announcementsanthropic",
-      "names",
-      "theo",
-      "hourmouzis",
-      "general",
-      "manager",
-      "australia",
-      "zealand"
-    ]
-  },
-  {
-    "title": "Apr 24, 2026AnnouncementsAn update on our election safeguards",
-    "source": "Anthropic News",
-    "url": "https://www.anthropic.com/news/election-safeguards-update",
-    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
-    "score": 10,
-    "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
-    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Vote&backgroundColor=olive",
-    "keywords": [
-      "2026announcementsan",
-      "update",
-      "election",
-      "safeguards",
-      "anthropic",
-      "safety",
-      "research",
-      "company"
-    ]
-  },
-  {
     "title": "Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce",
     "source": "Anthropic News",
     "url": "https://www.anthropic.com/news/anthropic-nec",
@@ -140,7 +74,7 @@
     "summaryEn": "NEC will deploy Claude to 30,000 employees and become Anthropic's first Japan-based global partner, co-developing AI products for finance, manufacturing, and government",
     "score": 10,
     "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
+    "date": "2026-05-07T10:53:12.254Z",
     "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20NodeGlobe&backgroundColor=heather",
     "keywords": [
       "2026announcementsanthropic",
@@ -162,7 +96,7 @@
     "summaryEn": "Understanding AI’s effects on the economy over time",
     "score": 9,
     "category": "LLM",
-    "date": "2026-05-07T09:07:38.632Z",
+    "date": "2026-05-07T10:53:12.253Z",
     "image": "https://cdn.sanity.io/images/4zrzovbb/website/d63af41b0aa9d5531ac43fec0cb018b3d476f230-1900x1000.png",
     "keywords": [
       "economic",
@@ -183,11 +117,77 @@
     "summaryEn": "Download press kit. Update published by Anthropic News.",
     "score": 9,
     "category": "LLM",
-    "date": "2026-05-07T09:07:38.633Z",
+    "date": "2026-05-07T10:53:12.254Z",
     "image": null,
     "keywords": [
       "download",
       "press"
+    ]
+  },
+  {
+    "title": "Apr 28, 2026AnnouncementsClaude for Creative Work",
+    "source": "Anthropic News",
+    "url": "https://www.anthropic.com/news/claude-for-creative-work",
+    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "score": 9,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:12.254Z",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20ShapeArrow&backgroundColor=cactus",
+    "keywords": [
+      "2026announcementsclaude",
+      "creative",
+      "work",
+      "anthropic",
+      "safety",
+      "research",
+      "company",
+      "working"
+    ]
+  },
+  {
+    "title": "Apr 27, 2026AnnouncementsAnthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
+    "source": "Anthropic News",
+    "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "score": 9,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:12.254Z",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "keywords": [
+      "2026announcementsanthropic",
+      "names",
+      "theo",
+      "hourmouzis",
+      "general",
+      "manager",
+      "australia",
+      "zealand"
+    ]
+  },
+  {
+    "title": "Apr 24, 2026AnnouncementsAn update on our election safeguards",
+    "source": "Anthropic News",
+    "url": "https://www.anthropic.com/news/election-safeguards-update",
+    "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryIt": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "summaryEn": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "score": 9,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:12.254Z",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Vote&backgroundColor=olive",
+    "keywords": [
+      "2026announcementsan",
+      "update",
+      "election",
+      "safeguards",
+      "anthropic",
+      "safety",
+      "research",
+      "company"
     ]
   },
   {
@@ -257,28 +257,6 @@
     ]
   },
   {
-    "title": "Building the compute infrastructure for the Intelligence Age",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
-    "summary": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
-    "summaryIt": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
-    "summaryEn": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
-    "score": 8,
-    "category": "LLM",
-    "date": "2026-04-29T15:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "compute",
-      "infrastructure",
-      "building",
-      "intelligence",
-      "openai",
-      "scales",
-      "stargate",
-      "build"
-    ]
-  },
-  {
     "title": "vLLM V0 to V1: Correctness Before Corrections in RL",
     "source": "HuggingFace",
     "url": "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
@@ -323,6 +301,248 @@
     ]
   },
   {
+    "title": "The Missing Piece in AI",
+    "source": "Hacker News AI",
+    "url": "https://twitter.com/ElironK300/status/2049640389565379013",
+    "summary": "Community signal from Hacker News: The Missing Piece in AI.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: The Missing Piece in AI.",
+    "summaryEn": "Community signal from Hacker News: The Missing Piece in AI.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T10:34:40.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "missing",
+      "piece",
+      "article",
+      "twitter",
+      "elironk300",
+      "status"
+    ]
+  },
+  {
+    "title": "AI coding agents read Git log as their first debugging step",
+    "source": "Hacker News AI",
+    "url": "https://thoughts.jock.pl/p/how-to-use-github-ai-builders-basics-2026",
+    "summary": "Community signal from Hacker News: AI coding agents read Git log as their first debugging step.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: AI coding agents read Git log as their first debugging step.",
+    "summaryEn": "Community signal from Hacker News: AI coding agents read Git log as their first debugging step.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T10:32:02.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "coding",
+      "agents",
+      "read",
+      "their",
+      "first",
+      "debugging"
+    ]
+  },
+  {
+    "title": "The AI fitness instructors selling unreal gains",
+    "source": "Hacker News AI",
+    "url": "https://www.bbc.com/sport/articles/c5ye7dnxv86o",
+    "summary": "Community signal from Hacker News: The AI fitness instructors selling unreal gains.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: The AI fitness instructors selling unreal gains.",
+    "summaryEn": "Community signal from Hacker News: The AI fitness instructors selling unreal gains.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T10:32:00.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "fitness",
+      "instructors",
+      "selling",
+      "unreal",
+      "gains",
+      "article"
+    ]
+  },
+  {
+    "title": "How to Work and Compound with AI",
+    "source": "Hacker News AI",
+    "url": "https://eugeneyan.com/writing/working-with-ai/",
+    "summary": "Community signal from Hacker News: How to Work and Compound with AI.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: How to Work and Compound with AI.",
+    "summaryEn": "Community signal from Hacker News: How to Work and Compound with AI.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T10:29:28.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "work",
+      "compound",
+      "article",
+      "eugeneyan",
+      "writing",
+      "working-with-ai"
+    ]
+  },
+  {
+    "title": "Show HN: Desktop Agent Center – Local AI Automation via Hotkeys",
+    "source": "Hacker News AI",
+    "url": "https://news.ycombinator.com/item?id=48047444",
+    "summary": "I built an open-source tool called Desktop Agent Center: https://github.com/WellWells/desktop-agent-center It's a local-first gateway designed to bridge the gap between your desktop workflow and AI web interfaces like ChatGPT, Gemini, and Perplexity. Comments URL: https://news.ycombinator.com/item?id=48047444 Points: 1 # Comments: 1",
+    "summaryIt": "I built an open source tool called Desktop Agent Center: https://github.com/WellWells/desktop-agent-center It's a local-first gateway designed to bridge the gap between your desktop workflow and AI web interfaces like ChatGPT, Gemini, and Perplexity. Comments URL: https://news.ycombinator.com/item?id=48047444 Points: 1 # Comments: 1",
+    "summaryEn": "I built an open-source tool called Desktop Agent Center: https://github.com/WellWells/desktop-agent-center It's a local-first gateway designed to bridge the gap between your desktop workflow and AI web interfaces like ChatGPT, Gemini, and Perplexity. Comments URL: https://news.ycombinator.com/item?id=48047444 Points: 1 # Comments: 1",
+    "score": 8,
+    "category": "Agentic AI",
+    "date": "2026-05-07T09:53:32.000Z",
+    "image": null,
+    "keywords": [
+      "desktop",
+      "agent",
+      "center",
+      "https",
+      "comments",
+      "show",
+      "local",
+      "automation"
+    ]
+  },
+  {
+    "title": "Ask HN: Real life autonomous AI Agents",
+    "source": "Hacker News AI",
+    "url": "https://news.ycombinator.com/item?id=48047428",
+    "summary": "Is there a place where I can read real use cases / actual deployments of AI Agents? The internet is flooded with examples similar to below but these in my head are not true AI Agents right? 1. If email arrives with pdf, check pdf for invoice information and put it in a google sheet is not a AI Agent? Its a workflow that now has llm call as a node 2. Check my…",
+    "summaryIt": "Is there a place where I can read real use cases / actual deployments of AI agenti? The internet is flooded with examples similar to below but these in my head are not true AI agenti right? 1. If email arrives with pdf, check pdf for invoice information and put it in a google sheet is not a AI Agent? Its a workflow that now has llm call as a node 2. Check my",
+    "summaryEn": "Is there a place where I can read real use cases / actual deployments of AI Agents? The internet is flooded with examples similar to below but these in my head are not true AI Agents right? 1. If email arrives with pdf, check pdf for invoice information and put it in a google sheet is not a AI Agent? Its a workflow that now has llm call as a node 2. Check my…",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:51:08.000Z",
+    "image": null,
+    "keywords": [
+      "agents",
+      "real",
+      "information",
+      "there",
+      "check",
+      "google",
+      "workflow",
+      "call"
+    ]
+  },
+  {
+    "title": "Locked, stocked, and losing budget: AI vendor lock-in bites back",
+    "source": "Hacker News AI",
+    "url": "https://www.theregister.com/software/2026/04/28/locked-stocked-and-losing-budget-ai-vendor-lock-in-bites/5229050",
+    "summary": "Community signal from Hacker News: Locked, stocked, and losing budget: AI vendor lock-in bites back.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: Locked, stocked, and losing budget: AI vendor lock-in bites back.",
+    "summaryEn": "Community signal from Hacker News: Locked, stocked, and losing budget: AI vendor lock-in bites back.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:46:54.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "locked",
+      "stocked",
+      "losing",
+      "budget",
+      "vendor",
+      "lock-in"
+    ]
+  },
+  {
+    "title": "AI Slop Is Killing Online Communities",
+    "source": "Hacker News AI",
+    "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
+    "summary": "Community signal from Hacker News: AI Slop Is Killing Online Communities.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: AI Slop Is Killing Online Communities.",
+    "summaryEn": "Community signal from Hacker News: AI Slop Is Killing Online Communities.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:45:32.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "slop",
+      "killing",
+      "online",
+      "communities",
+      "article",
+      "rmoff"
+    ]
+  },
+  {
+    "title": "'No one has done this in the wild': study observes AI replicate itself",
+    "source": "Hacker News AI",
+    "url": "https://www.theguardian.com/technology/2026/may/07/no-one-has-done-this-in-the-wild-study-observes-ai-replicate-itself",
+    "summary": "Community signal from Hacker News: 'No one has done this in the wild': study observes AI replicate itself.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: 'No one has done this in the wild': study observes AI replicate itself.",
+    "summaryEn": "Community signal from Hacker News: 'No one has done this in the wild': study observes AI replicate itself.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:45:08.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "done",
+      "wild",
+      "study",
+      "observes",
+      "replicate",
+      "itself"
+    ]
+  },
+  {
+    "title": "Prompt Screener – Catches biased prompts before you send them to AI",
+    "source": "Hacker News AI",
+    "url": "https://chromewebstore.google.com/detail/prompt-screener/hdooilgdenkeeccfomlkkenhmelobcjm",
+    "summary": "Community signal from Hacker News: Prompt Screener – Catches biased prompts before you send them to AI.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: Prompt Screener – Catches biased prompts before you send them to AI.",
+    "summaryEn": "Community signal from Hacker News: Prompt Screener – Catches biased prompts before you send them to AI.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:34:34.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "prompt",
+      "screener",
+      "catches",
+      "biased",
+      "prompts",
+      "before"
+    ]
+  },
+  {
+    "title": "U.S. and China Pursue Guardrails to Stop AI Rivalry from Spiraling into Crisis",
+    "source": "Hacker News AI",
+    "url": "https://www.wsj.com/world/china/u-s-and-china-pursue-guardrails-to-stop-ai-rivalry-from-spiraling-into-crisis-4c50bd70",
+    "summary": "Community signal from Hacker News: U.S. and China Pursue Guardrails to Stop AI Rivalry from Spiraling into Crisis.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: U.S. and China Pursue Guardrails to Stop AI Rivalry from Spiraling into Crisis.",
+    "summaryEn": "Community signal from Hacker News: U.S. and China Pursue Guardrails to Stop AI Rivalry from Spiraling into Crisis.",
+    "score": 8,
+    "category": "Coding AI",
+    "date": "2026-05-07T09:06:44.000Z",
+    "image": null,
+    "keywords": [
+      "china",
+      "https",
+      "comments",
+      "pursue",
+      "guardrails",
+      "stop",
+      "rivalry",
+      "spiraling"
+    ]
+  },
+  {
     "title": "Mapping Project Complexity with AI",
     "source": "Hacker News AI",
     "url": "https://www.maiobarbero.dev/articles/project-complexity-ai-skills/",
@@ -364,270 +584,6 @@
       "200k",
       "tweet",
       "hack"
-    ]
-  },
-  {
-    "title": "15 things I learnt launching AI projects in Government (4-part blog post)",
-    "source": "Hacker News AI",
-    "url": "https://puntofisso.net/blog/posts/things-i-learned-ai-summary/",
-    "summary": "Community signal from Hacker News: 15 things I learnt launching AI projects in Government (4-part blog post).",
-    "summaryIt": "Segnalazione dalla community di Hacker News: 15 things I learnt launching AI projects in Government (4-part blog post).",
-    "summaryEn": "Community signal from Hacker News: 15 things I learnt launching AI projects in Government (4-part blog post).",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T08:08:36.000Z",
-    "image": null,
-    "keywords": [
-      "blog",
-      "https",
-      "comments",
-      "things",
-      "learnt",
-      "launching",
-      "projects",
-      "government"
-    ]
-  },
-  {
-    "title": "Ask HN: Do you understand all the code written by AI in your company?",
-    "source": "Hacker News AI",
-    "url": "https://news.ycombinator.com/item?id=48046617",
-    "summary": "Comments URL: https://news.ycombinator.com/item?id=48046617 Points: 1 # Comments: 0",
-    "summaryIt": "Comments URL: https://news.ycombinator.com/item?id=48046617 Points: 1 # Comments: 0",
-    "summaryEn": "Comments URL: https://news.ycombinator.com/item?id=48046617 Points: 1 # Comments: 0",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:47:52.000Z",
-    "image": null,
-    "keywords": [
-      "comments",
-      "understand",
-      "code",
-      "written",
-      "company",
-      "https",
-      "news",
-      "ycombinator"
-    ]
-  },
-  {
-    "title": "The Comparator in Clinical AI",
-    "source": "Hacker News AI",
-    "url": "https://sparsethought.com/2026/05/03/science-paper/",
-    "summary": "Community signal from Hacker News: The Comparator in Clinical AI.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: The Comparator in Clinical AI.",
-    "summaryEn": "Community signal from Hacker News: The Comparator in Clinical AI.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:44:35.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "comparator",
-      "clinical",
-      "article",
-      "sparsethought",
-      "2026",
-      "science-paper"
-    ]
-  },
-  {
-    "title": "Symposium makes Rust dependencies actionable for AI agents",
-    "source": "Hacker News AI",
-    "url": "https://symposium.dev/",
-    "summary": "Community signal from Hacker News: Symposium makes Rust dependencies actionable for AI agents.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Symposium makes Rust dependencies actionable for AI agents.",
-    "summaryEn": "Community signal from Hacker News: Symposium makes Rust dependencies actionable for AI agents.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:35:24.000Z",
-    "image": null,
-    "keywords": [
-      "symposium",
-      "https",
-      "comments",
-      "makes",
-      "rust",
-      "dependencies",
-      "actionable",
-      "agents"
-    ]
-  },
-  {
-    "title": "Create Context Graph: Scaffold AI Agents with Graph Memory",
-    "source": "Hacker News AI",
-    "url": "https://medium.com/neo4j/introducing-create-context-graph-e6d40e2d55c7",
-    "summary": "Community signal from Hacker News: Create Context Graph: Scaffold AI Agents with Graph Memory.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Create Context Graph: Scaffold AI Agents with Graph Memory.",
-    "summaryEn": "Community signal from Hacker News: Create Context Graph: Scaffold AI Agents with Graph Memory.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:35:18.000Z",
-    "image": null,
-    "keywords": [
-      "graph",
-      "https",
-      "comments",
-      "create",
-      "context",
-      "scaffold",
-      "agents",
-      "memory"
-    ]
-  },
-  {
-    "title": "Would Lojban Enable AI (2005)",
-    "source": "Hacker News AI",
-    "url": "https://wiki.c2.com/?HowWouldLojbanEnableAi",
-    "summary": "Community signal from Hacker News: Would Lojban Enable AI (2005).",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Would Lojban Enable AI (2005).",
-    "summaryEn": "Community signal from Hacker News: Would Lojban Enable AI (2005).",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:27:29.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "would",
-      "lojban",
-      "enable",
-      "2005",
-      "article",
-      "wiki"
-    ]
-  },
-  {
-    "title": "Null loop solves AI Model Collapse",
-    "source": "Hacker News AI",
-    "url": "https://medium.com/@magass139/updated-preservation-necessity-2255dddb363b",
-    "summary": "Community signal from Hacker News: Null loop solves AI Model Collapse.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Null loop solves AI Model Collapse.",
-    "summaryEn": "Community signal from Hacker News: Null loop solves AI Model Collapse.",
-    "score": 8,
-    "category": "LLM",
-    "date": "2026-05-07T07:09:25.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "null",
-      "loop",
-      "solves",
-      "model",
-      "collapse",
-      "article"
-    ]
-  },
-  {
-    "title": "Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders",
-    "source": "Hacker News AI",
-    "url": "https://deepviews.xyz/research/ai-vc-landscape-en",
-    "summary": "Community signal from Hacker News: Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders.",
-    "summaryEn": "Community signal from Hacker News: Show HN: AI VC Landscape – 666 Deals Mapped by Stage, Geography, and Founders.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T07:00:23.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "show",
-      "landscape",
-      "deals",
-      "mapped",
-      "stage",
-      "geography"
-    ]
-  },
-  {
-    "title": "AI, Constraints, and the Future of Software Engineering",
-    "source": "Hacker News AI",
-    "url": "https://medium.com/analytics-and-data/ai-constraints-and-the-future-of-software-engineering-9ae33c9f1cb7",
-    "summary": "Community signal from Hacker News: AI, Constraints, and the Future of Software Engineering.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: AI, Constraints, and the Future of Software Engineering.",
-    "summaryEn": "Community signal from Hacker News: AI, Constraints, and the Future of Software Engineering.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T06:58:43.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "constraints",
-      "future",
-      "software",
-      "engineering",
-      "article",
-      "medium"
-    ]
-  },
-  {
-    "title": "Stackit and neuland.ai aim to provide LLMs in European data centers",
-    "source": "Hacker News AI",
-    "url": "https://www.heise.de/en/news/Sovereign-AI-from-Germany-11284778.html",
-    "summary": "Community signal from Hacker News: Stackit and neuland.ai aim to provide LLMs in European data centers.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Stackit and neuland.ai aim to provide LLMs in European data centers.",
-    "summaryEn": "Community signal from Hacker News: Stackit and neuland.ai aim to provide LLMs in European data centers.",
-    "score": 8,
-    "category": "LLM",
-    "date": "2026-05-07T06:53:36.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "news",
-      "comments",
-      "stackit",
-      "neuland",
-      "provide",
-      "llms",
-      "european"
-    ]
-  },
-  {
-    "title": "The \"AI Job Apocalypse\" is a complete fantasy",
-    "source": "Hacker News AI",
-    "url": "https://www.a16z.news/p/the-ai-job-apocalypse-is-a-complete",
-    "summary": "Community signal from Hacker News: The \"AI Job Apocalypse\" is a complete fantasy.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: The \"AI Job Apocalypse\" is a complete fantasy.",
-    "summaryEn": "Community signal from Hacker News: The \"AI Job Apocalypse\" is a complete fantasy.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T06:35:58.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "news",
-      "comments",
-      "apocalypse",
-      "complete",
-      "fantasy",
-      "article",
-      "a16z"
-    ]
-  },
-  {
-    "title": "Architectural Framework for Agentic AI in Identity and Eligibility",
-    "source": "Hacker News AI",
-    "url": "https://wwps.microsoft.com/content/agentic-ai-identity-eligibility/",
-    "summary": "Community signal from Hacker News: Architectural Framework for Agentic AI in Identity and Eligibility.",
-    "summaryIt": "Segnalazione dalla community di Hacker News: Architectural Framework for Agentic AI in Identity and Eligibility.",
-    "summaryEn": "Community signal from Hacker News: Architectural Framework for Agentic AI in Identity and Eligibility.",
-    "score": 8,
-    "category": "Coding AI",
-    "date": "2026-05-07T06:10:39.000Z",
-    "image": null,
-    "keywords": [
-      "https",
-      "comments",
-      "architectural",
-      "framework",
-      "agentic",
-      "identity",
-      "eligibility",
-      "article"
     ]
   },
   {
@@ -910,28 +866,6 @@
     ]
   },
   {
-    "title": "How OpenAI delivers low-latency voice AI at scale",
-    "source": "OpenAI Blog",
-    "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
-    "summary": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
-    "summaryIt": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
-    "summaryEn": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
-    "score": 7,
-    "category": "LLM",
-    "date": "2026-05-04T00:00:00.000Z",
-    "image": null,
-    "keywords": [
-      "openai",
-      "voice",
-      "scale",
-      "delivers",
-      "low-latency",
-      "rebuilt",
-      "webrtc",
-      "stack"
-    ]
-  },
-  {
     "title": "Introducing Advanced Account Security",
     "source": "OpenAI Blog",
     "url": "https://openai.com/index/advanced-account-security",
@@ -973,6 +907,28 @@
       "spread",
       "models",
       "timeline"
+    ]
+  },
+  {
+    "title": "Building the compute infrastructure for the Intelligence Age",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
+    "summary": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
+    "summaryIt": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
+    "summaryEn": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
+    "score": 7,
+    "category": "AI Design",
+    "date": "2026-04-29T15:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "compute",
+      "infrastructure",
+      "building",
+      "intelligence",
+      "openai",
+      "scales",
+      "stargate",
+      "build"
     ]
   },
   {
@@ -1152,6 +1108,28 @@
     ]
   },
   {
+    "title": "Is AI Creative?",
+    "source": "Hacker News AI",
+    "url": "https://negativestarinnovators.com/blog/does-ai-actually-have-creativity",
+    "summary": "Community signal from Hacker News: Is AI Creative?.",
+    "summaryIt": "Segnalazione dalla community di Hacker News: Is AI Creative?.",
+    "summaryEn": "Community signal from Hacker News: Is AI Creative?.",
+    "score": 7,
+    "category": "AI Design",
+    "date": "2026-05-07T09:52:40.000Z",
+    "image": null,
+    "keywords": [
+      "https",
+      "comments",
+      "creative",
+      "article",
+      "negativestarinnovators",
+      "blog",
+      "does-ai-actually-have-creativity",
+      "news"
+    ]
+  },
+  {
     "title": "Show HN: Imagev2.me – Tired of juggling AI image subs, so I built one studio",
     "source": "Hacker News AI",
     "url": "https://imagev2.me/",
@@ -1218,25 +1196,25 @@
     ]
   },
   {
-    "title": "Anthropic researchers detail “model spec midtraining”, which adds a stage between pretraining and fine-tuning to improve generalization from alignment training",
+    "title": "I got the Enterprise Standard/Plus 30 day trial but I'm not sure if it activated properly? How do I used it for video generation",
     "source": "Reddit AI Communities",
-    "url": "https://www.reddit.com/r/artificial/comments/1t5zoq4/anthropic_researchers_detail_model_spec/",
-    "summary": "submitted by /u/tekz [link] [comments]",
-    "summaryIt": "submitted by /u/tekz [link] [comments]",
-    "summaryEn": "submitted by /u/tekz [link] [comments]",
+    "url": "https://www.reddit.com/r/artificial/comments/1t656i2/i_got_the_enterprise_standardplus_30_day_trial/",
+    "summary": "So I signed up for the 30 day trial. The trial was available for either business or standard/plus plan. As far as I could see the standard/plus plan includes everything in the business plan but more, so it made sense to go with that one. Plus, when I tried to select the business plan it asked for a business email but when I selected the standard/plus plan, i…",
+    "summaryIt": "So I signed up for the 30 day trial. The trial was available for either business or standard/plus plan. As far as I could see the standard/plus plan includes everything in the business plan but more, so it made sense to go with that one. Plus, when I tried to select the business plan it asked for a business email but when I selected the standard/plus plan, i…",
+    "summaryEn": "So I signed up for the 30 day trial. The trial was available for either business or standard/plus plan. As far as I could see the standard/plus plan includes everything in the business plan but more, so it made sense to go with that one. Plus, when I tried to select the business plan it asked for a business email but when I selected the standard/plus plan, i…",
     "score": 7,
-    "category": "LLM",
-    "date": "2026-05-07T04:06:31.000Z",
+    "category": "Coding AI",
+    "date": "2026-05-07T09:15:52.000Z",
     "image": null,
     "keywords": [
-      "anthropic",
-      "researchers",
-      "detail",
-      "model",
-      "spec",
-      "midtraining",
-      "which",
-      "adds"
+      "trial",
+      "plan",
+      "plus",
+      "business",
+      "standard",
+      "says",
+      "used",
+      "video"
     ]
   },
   {
@@ -1284,25 +1262,25 @@
     ]
   },
   {
-    "title": "We built a way for two people's AI context to talk to each other (without sharing their conversations)",
+    "title": "Roche to buy PathAI for up to $1.05 billion to bolster AI diagnostics tools",
     "source": "Reddit AI Communities",
-    "url": "https://www.reddit.com/r/artificial/comments/1t6431v/we_built_a_way_for_two_peoples_ai_context_to_talk/",
-    "summary": "We've been thinking about how we use AI in our relationships. Big part of it is about other people. Talking about them, figuring out what to say to them, understanding why they did this and that. So AI or LLMs build up this picture of the people in our lives but just from our perspective. Every user is just... in their own bubble. We started wondering what h…",
-    "summaryIt": "We've been thinking about how we use AI in our relationships. Big part of it is about other people. Talking about them, figuring out what to say to them, understanding why they did this and that. So AI or LLMs build up this picture of the people in our lives but just from our perspective. Every user is just... in their own bubble. We started wondering what h…",
-    "summaryEn": "We've been thinking about how we use AI in our relationships. Big part of it is about other people. Talking about them, figuring out what to say to them, understanding why they did this and that. So AI or LLMs build up this picture of the people in our lives but just from our perspective. Every user is just... in their own bubble. We started wondering what h…",
+    "url": "https://www.reddit.com/r/artificial/comments/1t669lb/roche_to_buy_pathai_for_up_to_105_billion_to/",
+    "summary": "The pharma giant has agreed to pay $750 million upfront, with up to $300 million in additional payments subject to targets. submitted by /u/tekz [link] [comments]",
+    "summaryIt": "The pharma giant has agreed to pay $750 million upfront, with up to $300 million in additional payments subject to targets. submitted by /u/tekz [link] [comments]",
+    "summaryEn": "The pharma giant has agreed to pay $750 million upfront, with up to $300 million in additional payments subject to targets. submitted by /u/tekz [link] [comments]",
     "score": 7,
-    "category": "LLM",
-    "date": "2026-05-07T08:10:07.000Z",
+    "category": "Agentic AI",
+    "date": "2026-05-07T10:16:18.000Z",
     "image": null,
     "keywords": [
-      "people",
-      "other",
-      "each",
-      "they",
-      "just",
-      "built",
-      "talk",
-      "sharing"
+      "million",
+      "roche",
+      "pathai",
+      "billion",
+      "bolster",
+      "diagnostics",
+      "tools",
+      "pharma"
     ]
   },
   {
@@ -1475,6 +1453,99 @@
     ]
   },
   {
+    "title": "Inside Figma",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/inside-figma/",
+    "summary": "Inside Figma. Update published by Figma Blog.",
+    "summaryIt": "Inside Figma. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Inside Figma. Update published by Figma Blog.",
+    "score": 7,
+    "category": "Coding AI",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "inside",
+      "figma"
+    ]
+  },
+  {
+    "title": "NewsGet the latest on all things Figma",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/news/",
+    "summary": "Get the latest on all things Figma",
+    "summaryIt": "Get the latest on all things Figma",
+    "summaryEn": "Get the latest on all things Figma",
+    "score": 7,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "latest",
+      "things",
+      "figma",
+      "newsget"
+    ]
+  },
+  {
+    "title": "About CanvaAbout Canva",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/about/",
+    "summary": "Launched in 2013, Canva is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere.",
+    "summaryIt": "Launched in 2013, Canva is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere.",
+    "summaryEn": "Launched in 2013, Canva is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere.",
+    "score": 7,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": "https://content-management-files.canva.com/105f924a-cf73-491f-9620-b33c260ed0ec/og-image-about.png",
+    "keywords": [
+      "canva",
+      "design",
+      "canvaabout",
+      "launched",
+      "2013",
+      "online",
+      "publishing",
+      "tool"
+    ]
+  },
+  {
+    "title": "UpdatesNew",
+    "source": "Framer Blog",
+    "url": "https://www.framer.com/updates",
+    "summary": "New",
+    "summaryIt": "New",
+    "summaryEn": "New",
+    "score": 7,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:22.659Z",
+    "image": null,
+    "keywords": [
+      "updatesnew"
+    ]
+  },
+  {
+    "title": "How OpenAI delivers low-latency voice AI at scale",
+    "source": "OpenAI Blog",
+    "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
+    "summary": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
+    "summaryIt": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
+    "summaryEn": "How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-04T00:00:00.000Z",
+    "image": null,
+    "keywords": [
+      "openai",
+      "voice",
+      "scale",
+      "delivers",
+      "low-latency",
+      "rebuilt",
+      "webrtc",
+      "stack"
+    ]
+  },
+  {
     "title": "Cybersecurity in the Intelligence Age",
     "source": "OpenAI Blog",
     "url": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
@@ -1629,25 +1700,25 @@
     ]
   },
   {
-    "title": "AI Podcasts made learning economics way less painful for me",
+    "title": "Anthropic researchers detail “model spec midtraining”, which adds a stage between pretraining and fine-tuning to improve generalization from alignment training",
     "source": "Reddit AI Communities",
-    "url": "https://www.reddit.com/r/artificial/comments/1t5q6pd/ai_podcasts_made_learning_economics_way_less/",
-    "summary": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
-    "summaryIt": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
-    "summaryEn": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5zoq4/anthropic_researchers_detail_model_spec/",
+    "summary": "submitted by /u/tekz [link] [comments]",
+    "summaryIt": "submitted by /u/tekz [link] [comments]",
+    "summaryEn": "submitted by /u/tekz [link] [comments]",
     "score": 6,
-    "category": "Agentic AI",
-    "date": "2026-05-06T21:16:43.000Z",
+    "category": "LLM",
+    "date": "2026-05-07T04:06:31.000Z",
     "image": null,
     "keywords": [
-      "less",
-      "like",
-      "learning",
-      "economics",
-      "feels",
-      "made",
-      "painful",
-      "honestly"
+      "anthropic",
+      "researchers",
+      "detail",
+      "model",
+      "spec",
+      "midtraining",
+      "which",
+      "adds"
     ]
   },
   {
@@ -1668,6 +1739,28 @@
       "theonlyvibemaster",
       "link",
       "comments"
+    ]
+  },
+  {
+    "title": "AI Podcasts made learning economics way less painful for me",
+    "source": "Reddit AI Communities",
+    "url": "https://www.reddit.com/r/artificial/comments/1t5q6pd/ai_podcasts_made_learning_economics_way_less/",
+    "summary": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
+    "summaryIt": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
+    "summaryEn": "I’m basically a total beginner when it comes to finance and economics maybe 2 or 3 months ago, and honestly trying to learn from reports or books used to completely destroy me. Too many charts, numbers, random terms I have to Google every 2 minutes. And I started using AI Podcast to kind of brute force my way into learning this stuff, and I’m honestly surpri…",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-06T21:16:43.000Z",
+    "image": null,
+    "keywords": [
+      "less",
+      "like",
+      "learning",
+      "economics",
+      "feels",
+      "made",
+      "painful",
+      "honestly"
     ]
   },
   {
@@ -1781,28 +1874,6 @@
     ]
   },
   {
-    "title": "Cheat Engine with AI ?! has anyone tried Wand yet?",
-    "source": "Reddit AI Communities",
-    "url": "https://www.reddit.com/r/artificial/comments/1t5uvd1/cheat_engine_with_ai_has_anyone_tried_wand_yet/",
-    "summary": "cheapywin I found this site called Wand, and honestly I’m not really sure what to think. At first glance it looks like some kind of Cheat Engine / WeMod thing, but packaged better and with an AI layer on top. In-game assists, XP boosts, resources, adjustable difficulty, interactive maps, teleport, guides while you play, etc. On one hand, I get the idea. In s…",
-    "summaryIt": "cheapywin I found this site called Wand, and honestly I’m not really sure what to think. At first glance it looks like some kind of Cheat Engine / WeMod thing, but packaged better and with an AI layer on top. In-game assists, XP boosts, resources, adjustable difficulty, interactive maps, teleport, guides while you play, etc. On one hand, I get the idea. In s…",
-    "summaryEn": "cheapywin I found this site called Wand, and honestly I’m not really sure what to think. At first glance it looks like some kind of Cheat Engine / WeMod thing, but packaged better and with an AI layer on top. In-game assists, XP boosts, resources, adjustable difficulty, interactive maps, teleport, guides while you play, etc. On one hand, I get the idea. In s…",
-    "score": 6,
-    "category": "Coding AI",
-    "date": "2026-05-07T00:25:44.000Z",
-    "image": null,
-    "keywords": [
-      "cheat",
-      "engine",
-      "anyone",
-      "tried",
-      "wand",
-      "like",
-      "some",
-      "games"
-    ]
-  },
-  {
     "title": "Agent Builder is now LangSmith Fleet",
     "source": "LangChain Changelog",
     "url": "https://changelog.langchain.com/announcements/agent-builder-is-now-langsmith-fleet?utm_source=LaunchNotes&utm_medium=rss",
@@ -1869,28 +1940,6 @@
     ]
   },
   {
-    "title": "LangChain MCP Adapters 0.2.0",
-    "source": "LangChain Changelog",
-    "url": "https://changelog.langchain.com/announcements/langchain-mcp-adapters-0-2-0?utm_source=LaunchNotes&utm_medium=rss",
-    "summary": "LangChain MCP Adapters 0.2.0 is live. This release brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
-    "summaryIt": "LangChain MCP Adapters 0.2.0 is live. questo rilascio brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
-    "summaryEn": "LangChain MCP Adapters 0.2.0 is live. This release brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
-    "score": 6,
-    "category": "Agentic AI",
-    "date": "2025-12-09T19:11:00.000Z",
-    "image": "https://uploads-ssl.webflow.com/5d4754a8a904cd6b8b0355be/5db7affd24ac076310645649_RocketHero%20Light%20Orange-p-800.png",
-    "keywords": [
-      "langchain",
-      "adapters",
-      "live",
-      "release",
-      "brings",
-      "quality-of-life",
-      "upgrades",
-      "anyone"
-    ]
-  },
-  {
     "title": "LangChain 1.1",
     "source": "LangChain Changelog",
     "url": "https://changelog.langchain.com/announcements/langchain-1-1?utm_source=LaunchNotes&utm_medium=rss",
@@ -1910,6 +1959,308 @@
       "development",
       "reliable",
       "structured"
+    ]
+  },
+  {
+    "title": "Maker Stories",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/maker-stories/",
+    "summary": "Maker Stories. Update published by Figma Blog.",
+    "summaryIt": "Maker Stories. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Maker Stories. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "maker",
+      "stories"
+    ]
+  },
+  {
+    "title": "Working Well",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/working-well/",
+    "summary": "Working Well. Update published by Figma Blog.",
+    "summaryIt": "Working Well. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Working Well. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "working",
+      "well"
+    ]
+  },
+  {
+    "title": "Insights",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/insights/",
+    "summary": "Insights. Update published by Figma Blog.",
+    "summaryIt": "Insights. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Insights. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "insights"
+    ]
+  },
+  {
+    "title": "Design systemsEverything you need to know about building and scaling design systems in the age of AI",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/design-systems/",
+    "summary": "Everything you need to know about building and scaling design systems in the age of AI",
+    "summaryIt": "Everything you need to know about building and scaling design systems in the age of AI",
+    "summaryEn": "Everything you need to know about building and scaling design systems in the age of AI",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.671Z",
+    "image": null,
+    "keywords": [
+      "design",
+      "need",
+      "know",
+      "building",
+      "scaling",
+      "systems",
+      "systemseverything",
+      "everything"
+    ]
+  },
+  {
+    "title": "3D design",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/3d-design/",
+    "summary": "3D design. Update published by Figma Blog.",
+    "summaryIt": "3D design. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "3D design. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.672Z",
+    "image": null,
+    "keywords": [
+      "design"
+    ]
+  },
+  {
+    "title": "Accessibility",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/accessibility/",
+    "summary": "Accessibility. Update published by Figma Blog.",
+    "summaryIt": "Accessibility. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Accessibility. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.672Z",
+    "image": null,
+    "keywords": [
+      "accessibility"
+    ]
+  },
+  {
+    "title": "Behind the scenes",
+    "source": "Figma Blog",
+    "url": "https://www.figma.com/blog/behind-the-scenes/",
+    "summary": "Behind the scenes. Update published by Figma Blog.",
+    "summaryIt": "Behind the scenes. Aggiornamento pubblicato da Figma Blog.",
+    "summaryEn": "Behind the scenes. Update published by Figma Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:18.672Z",
+    "image": null,
+    "keywords": [
+      "behind",
+      "scenes"
+    ]
+  },
+  {
+    "title": "HomeHome",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/",
+    "summary": "Unsupported client – Canva",
+    "summaryIt": "Unsupported client – Canva",
+    "summaryEn": "Unsupported client – Canva",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.979Z",
+    "image": "https://static.canva.com/static/images/fb_cover-1.jpg",
+    "keywords": [
+      "homehome",
+      "unsupported",
+      "client",
+      "canva"
+    ]
+  },
+  {
+    "title": "CareersCareers",
+    "source": "Canva Newsroom",
+    "url": "https://www.lifeatcanva.com/en/",
+    "summary": "Join Canva's mission to empower the world to design and discover exciting career opportunities! With over 30 billion designs created, we're just getting started. If you're ready to tackle complex challenges and make a positive impact, your next role could be waiting for you.",
+    "summaryIt": "Join Canva's mission to empower the world to design and discover exciting career opportunities! With over 30 billion designs created, we're just getting started. If you're ready to tackle complex challenges and make a positive impact, your next role could be waiting for you.",
+    "summaryEn": "Join Canva's mission to empower the world to design and discover exciting career opportunities! With over 30 billion designs created, we're just getting started. If you're ready to tackle complex challenges and make a positive impact, your next role could be waiting for you.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": "https://www.lifeatcanva.com/media/fv4nkznm/culture-interview-stills_08.jpg?width=1200&height=630&v=1dbd164170aa530&hmac=675980858cc4c07cb0974659b768a598d4954ac3f36d1eb1c402932b5623025e",
+    "keywords": [
+      "careerscareers",
+      "join",
+      "canva",
+      "mission",
+      "empower",
+      "world",
+      "design",
+      "discover"
+    ]
+  },
+  {
+    "title": "Press HubPress Hub",
+    "source": "Canva Newsroom",
+    "url": "https://public.canva.site/canva-press-hub",
+    "summary": "Press HubPress Hub. Update published by Canva Newsroom.",
+    "summaryIt": "Press HubPress Hub. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "Press HubPress Hub. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": null,
+    "keywords": [
+      "press",
+      "hubpress"
+    ]
+  },
+  {
+    "title": "Case studiesCase studies",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/case-studies/",
+    "summary": "Showcase of Canva customer case studies. Discover how leading brands who use Canva level up their visual communications across small business, teams and enterprises.",
+    "summaryIt": "Showcase of Canva customer case studies. Discover how leading brands who use Canva level up their visual communications across small business, teams and enterprises.",
+    "summaryEn": "Showcase of Canva customer case studies. Discover how leading brands who use Canva level up their visual communications across small business, teams and enterprises.",
+    "score": 6,
+    "category": "Enterprise AI",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": null,
+    "keywords": [
+      "case",
+      "studies",
+      "canva",
+      "studiescase",
+      "showcase",
+      "customer",
+      "discover",
+      "leading"
+    ]
+  },
+  {
+    "title": "Brand GuidelinesBrand Guidelines",
+    "source": "Canva Newsroom",
+    "url": "https://canvacreative.team/brand",
+    "summary": "Brand GuidelinesBrand Guidelines. Update published by Canva Newsroom.",
+    "summaryIt": "Brand GuidelinesBrand Guidelines. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "Brand GuidelinesBrand Guidelines. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": null,
+    "keywords": [
+      "brand",
+      "guidelinesbrand",
+      "guidelines"
+    ]
+  },
+  {
+    "title": "AI + Product",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/newsroom/news/?category=product",
+    "summary": "AI + Product. Update published by Canva Newsroom.",
+    "summaryIt": "AI + Product. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "AI + Product. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": null,
+    "keywords": [
+      "product"
+    ]
+  },
+  {
+    "title": "Canva for Work",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/newsroom/news/?category=b2b",
+    "summary": "Canva for Work. Update published by Canva Newsroom.",
+    "summaryIt": "Canva for Work. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "Canva for Work. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.980Z",
+    "image": null,
+    "keywords": [
+      "canva",
+      "work"
+    ]
+  },
+  {
+    "title": "Company Updates",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/newsroom/news/?category=corporate",
+    "summary": "Company Updates. Update published by Canva Newsroom.",
+    "summaryIt": "Company Updates. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "Company Updates. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.981Z",
+    "image": null,
+    "keywords": [
+      "company",
+      "updates"
+    ]
+  },
+  {
+    "title": "Education",
+    "source": "Canva Newsroom",
+    "url": "https://www.canva.com/newsroom/news/?category=education",
+    "summary": "Education. Update published by Canva Newsroom.",
+    "summaryIt": "Education. Aggiornamento pubblicato da Canva Newsroom.",
+    "summaryEn": "Education. Update published by Canva Newsroom.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:17.981Z",
+    "image": null,
+    "keywords": [
+      "education"
+    ]
+  },
+  {
+    "title": "Collaborate",
+    "source": "Framer Blog",
+    "url": "https://www.framer.com/collaborate/",
+    "summary": "Collaborate. Update published by Framer Blog.",
+    "summaryIt": "Collaborate. Aggiornamento pubblicato da Framer Blog.",
+    "summaryEn": "Collaborate. Update published by Framer Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:22.658Z",
+    "image": null,
+    "keywords": [
+      "collaborate"
+    ]
+  },
+  {
+    "title": "Performance",
+    "source": "Framer Blog",
+    "url": "https://www.framer.com/performance/",
+    "summary": "Performance. Update published by Framer Blog.",
+    "summaryIt": "Performance. Aggiornamento pubblicato da Framer Blog.",
+    "summaryEn": "Performance. Update published by Framer Blog.",
+    "score": 6,
+    "category": "AI Design",
+    "date": "2026-05-07T10:53:22.659Z",
+    "image": null,
+    "keywords": [
+      "performance"
     ]
   },
   {
@@ -2108,6 +2459,28 @@
       "langsmith",
       "comparing",
       "fast"
+    ]
+  },
+  {
+    "title": "LangChain MCP Adapters 0.2.0",
+    "source": "LangChain Changelog",
+    "url": "https://changelog.langchain.com/announcements/langchain-mcp-adapters-0-2-0?utm_source=LaunchNotes&utm_medium=rss",
+    "summary": "LangChain MCP Adapters 0.2.0 is live. This release brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
+    "summaryIt": "LangChain MCP Adapters 0.2.0 is live. questo rilascio brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
+    "summaryEn": "LangChain MCP Adapters 0.2.0 is live. This release brings quality-of-life upgrades for anyone building with MCP tools in LangChain: Multimodal tool support...",
+    "score": 5,
+    "category": "AI Design",
+    "date": "2025-12-09T19:11:00.000Z",
+    "image": "https://uploads-ssl.webflow.com/5d4754a8a904cd6b8b0355be/5db7affd24ac076310645649_RocketHero%20Light%20Orange-p-800.png",
+    "keywords": [
+      "langchain",
+      "adapters",
+      "live",
+      "release",
+      "brings",
+      "quality-of-life",
+      "upgrades",
+      "anyone"
     ]
   },
   {

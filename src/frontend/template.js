@@ -68,6 +68,14 @@ export function renderHtml(newsItems, meta) {
       <div id="trendBars" class="rounded-2xl border border-white/10 bg-glass backdrop-blur p-4 space-y-3"></div>
     </section>
 
+    <section class="mb-10">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-xl font-semibold" data-i18n="designSpotlight">Design Spotlight</h2>
+        <span class="text-xs text-slate-500" data-i18n="designSpotlightHint">Figma, Canva, Adobe, Framer</span>
+      </div>
+      <div id="designSpotlight" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
     <section>
       <h2 class="text-xl font-semibold mb-3" data-i18n="timeline">AI Timeline</h2>
       <div id="timeline" class="space-y-4"></div>
@@ -87,6 +95,9 @@ export function renderHtml(newsItems, meta) {
         mostImportant: "Most Important Today",
         topFive: "Daily Top 5",
         rankingTrend: "Ranking Trend",
+        designSpotlight: "Design Spotlight",
+        designSpotlightHint: "Figma, Canva, Adobe, Framer",
+        designEmpty: "No design news yet today.",
         timeline: "AI Timeline",
         openArticle: "Open article →",
         showMore: "Show more",
@@ -105,6 +116,9 @@ export function renderHtml(newsItems, meta) {
         mostImportant: "Più importanti di oggi",
         topFive: "Top 5 giornaliera",
         rankingTrend: "Trend ranking",
+        designSpotlight: "Vetrina Design",
+        designSpotlightHint: "Figma, Canva, Adobe, Framer",
+        designEmpty: "Nessuna novità design oggi.",
         timeline: "Timeline AI",
         openArticle: "Apri articolo →",
         showMore: "Mostra di più",
@@ -147,6 +161,8 @@ export function renderHtml(newsItems, meta) {
     const topFive = document.getElementById("topFive");
     const mostImportant = document.getElementById("mostImportant");
     const trendBars = document.getElementById("trendBars");
+    const designSpotlight = document.getElementById("designSpotlight");
+    const DESIGN_SOURCES = new Set(["Figma Blog", "Canva Newsroom", "Adobe Blog", "Framer Blog"]);
 
     const sorted = [...rawData].sort((a, b) => b.score - a.score);
 
@@ -226,6 +242,26 @@ export function renderHtml(newsItems, meta) {
       \`).join("");
     }
 
+    function renderDesignSpotlight(items) {
+      const dict = I18N[currentLang];
+      const designItems = items.filter((item) => item.category === "AI Design" || DESIGN_SOURCES.has(item.source));
+      if (designItems.length === 0) {
+        designSpotlight.innerHTML = \`<p class="text-sm text-slate-500 col-span-full">\${dict.designEmpty}</p>\`;
+        return;
+      }
+      designSpotlight.innerHTML = designItems.slice(0, 6).map((item) => \`
+        <article class="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/5 p-4 transition hover:-translate-y-1">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs px-2 py-1 rounded bg-fuchsia-500/30">\${escapeHtml(item.source)}</span>
+            <span class="text-xs text-fuchsia-300">\${item.score}/10</span>
+          </div>
+          <h3 class="mt-2 text-sm font-medium line-clamp-3">\${escapeHtml(item.title)}</h3>
+          <p class="mt-2 text-xs text-slate-300 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
+          <a class="text-xs text-cyan-300 mt-2 inline-block" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>
+        </article>
+      \`).join("");
+    }
+
     function renderTrend(items) {
       const grouped = items.reduce((acc, item) => {
         acc[item.category] = acc[item.category] || [];
@@ -293,6 +329,7 @@ export function renderHtml(newsItems, meta) {
       renderTimeline(filtered);
       renderTopFive(filtered);
       renderTrend(filtered);
+      renderDesignSpotlight(filtered);
     }
 
     function setLanguage(lang) {
