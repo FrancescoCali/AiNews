@@ -46,10 +46,13 @@ export function renderHtml(newsItems, meta) {
           <option value="all" data-i18n="allCategories">All categories</option>
         </select>
       </div>
-      <div class="rounded-2xl border border-white/10 bg-glass backdrop-blur p-4">
-        <select id="sourceFilter" class="w-full rounded-lg bg-slate-900 border border-slate-700 px-4 py-2">
-          <option value="all" data-i18n="allSources">All sources</option>
-        </select>
+      <div class="rounded-2xl border border-white/10 bg-glass backdrop-blur p-4 relative">
+        <button id="sourceFilterButton" type="button" class="w-full flex items-center justify-between rounded-lg bg-slate-900 border border-slate-700 px-4 py-2 text-left hover:border-slate-500 transition">
+          <span id="sourceFilterLabel" data-i18n="allSources">All sources</span>
+          <svg class="w-4 h-4 text-slate-400 ml-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 011.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+        </button>
+        <div id="sourceFilterMenu" class="hidden absolute left-0 right-0 mt-2 z-30 rounded-lg border border-slate-700 bg-slate-900/95 backdrop-blur shadow-xl max-h-72 overflow-y-auto px-1 py-1"></div>
+        <input type="hidden" id="sourceFilter" value="all" />
       </div>
     </section>
 
@@ -189,11 +192,56 @@ export function renderHtml(newsItems, meta) {
       categoryFilter.appendChild(opt);
     });
 
-    [...new Set(sorted.map((x) => x.source))].sort().forEach((src) => {
-      const opt = document.createElement("option");
-      opt.value = src;
-      opt.textContent = src;
-      sourceFilter.appendChild(opt);
+    const sourceFilterButton = document.getElementById("sourceFilterButton");
+    const sourceFilterMenu = document.getElementById("sourceFilterMenu");
+    const sourceFilterLabel = document.getElementById("sourceFilterLabel");
+    const SOURCE_LIST = ["all", ...[...new Set(sorted.map((x) => x.source))].sort()];
+
+    function buildSourceMenu() {
+      const dict = I18N[currentLang];
+      sourceFilterMenu.innerHTML = SOURCE_LIST.map((src) => {
+        const label = src === "all" ? dict.allSources : src;
+        const isActive = sourceFilter.value === src;
+        const activeCls = isActive ? "bg-violet-500/20 text-violet-200" : "text-slate-200 hover:bg-slate-800";
+        return \`<button type="button" data-source="\${escapeHtml(src)}" class="w-full text-left text-sm px-3 py-2 rounded-md transition \${activeCls}">\${escapeHtml(label)}</button>\`;
+      }).join("");
+      sourceFilterMenu.querySelectorAll("button[data-source]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const value = btn.dataset.source;
+          sourceFilter.value = value;
+          sourceFilterLabel.textContent = value === "all" ? I18N[currentLang].allSources : value;
+          closeSourceMenu();
+          filterItems();
+        });
+      });
+    }
+
+    function openSourceMenu() {
+      buildSourceMenu();
+      sourceFilterMenu.classList.remove("hidden");
+    }
+
+    function closeSourceMenu() {
+      sourceFilterMenu.classList.add("hidden");
+    }
+
+    sourceFilterButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (sourceFilterMenu.classList.contains("hidden")) {
+        openSourceMenu();
+      } else {
+        closeSourceMenu();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!sourceFilterMenu.contains(e.target) && e.target !== sourceFilterButton) {
+        closeSourceMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeSourceMenu();
     });
 
     let currentLang = localStorage.getItem("ai-news-lang") || "en";
@@ -353,6 +401,9 @@ export function renderHtml(newsItems, meta) {
       currentLang = lang;
       localStorage.setItem("ai-news-lang", lang);
       applyI18n();
+      if (sourceFilter.value === "all") {
+        sourceFilterLabel.textContent = I18N[currentLang].allSources;
+      }
       renderMostImportant();
       filterItems();
     }
@@ -363,7 +414,6 @@ export function renderHtml(newsItems, meta) {
 
     searchInput.addEventListener("input", filterItems);
     categoryFilter.addEventListener("change", filterItems);
-    sourceFilter.addEventListener("change", filterItems);
 
     setLanguage(currentLang);
   </script>
