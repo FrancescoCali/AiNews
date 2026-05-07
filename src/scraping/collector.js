@@ -19,6 +19,30 @@ const limiter = new Bottleneck({
 
 const SOURCE_CONCURRENCY = 3;
 
+function isLikelyJunkTitle(title = "") {
+  const t = title.trim().toLowerCase();
+  if (!t || t.length < 8) return true;
+  const blocked = [
+    "news",
+    "newsroom",
+    "research",
+    "support",
+    "press kit",
+    "privacy",
+    "terms",
+    "cookies"
+  ];
+  return blocked.includes(t);
+}
+
+function isValidArticleUrl(url = "") {
+  if (!url) return false;
+  const lower = url.toLowerCase();
+  if (lower.startsWith("mailto:") || lower.startsWith("javascript:")) return false;
+  if (lower.includes("/cdn-cgi/") || lower.endsWith("#")) return false;
+  return /^https?:\/\//.test(lower);
+}
+
 function extractImage(item, html = "") {
   if (item.enclosure?.url) return item.enclosure.url;
   const media = item?.["media:content"]?.url || item?.["media:thumbnail"]?.url;
@@ -30,11 +54,13 @@ function extractImage(item, html = "") {
 
 function normalizeEntry(source, item) {
   const description = item.contentSnippet || item.summary || item.content || "";
+  const rawUrl = item.link || source.homepage;
+  const url = rawUrl && rawUrl.startsWith("http") ? rawUrl.split("#")[0] : rawUrl;
   return {
     title: item.title?.trim() || "Untitled",
     source: source.name,
     sourceId: source.id,
-    url: item.link || source.homepage,
+    url,
     description: description.trim(),
     date: item.isoDate || item.pubDate || new Date().toISOString(),
     author: item.creator || item.author || "Unknown",
@@ -115,7 +141,17 @@ export async function collectNews() {
     )
   );
 
-  const items = perSource.flat();
+  const dedupeSet = new Set();
+  const items = perSource
+    .flat()
+    .filter((item) => isValidArticleUrl(item.url))
+    .filter((item) => !isLikelyJunkTitle(item.title))
+    .filter((item) => {
+      const key = `${item.url}|${item.title}`.toLowerCase();
+      if (dedupeSet.has(key)) return false;
+      dedupeSet.add(key);
+      return true;
+    });
   return {
     runAt,
     total: items.length,

@@ -75,10 +75,40 @@ function extractKeywords(item) {
     .map(([word]) => word);
 }
 
+function translateToItalianLocal(text = "") {
+  const replacements = [
+    [/update published by/gi, "aggiornamento pubblicato da"],
+    [/introducing/gi, "presentazione"],
+    [/release introduces/gi, "rilascio introduce"],
+    [/this release/gi, "questo rilascio"],
+    [/learn how/gi, "scopri come"],
+    [/now available/gi, "ora disponibile"],
+    [/open-source/gi, "open source"],
+    [/security/gi, "sicurezza"],
+    [/partnership/gi, "partnership"],
+    [/agents/gi, "agenti"],
+    [/model/gi, "modello"],
+    [/models/gi, "modelli"]
+  ];
+
+  let out = text;
+  for (const [pattern, value] of replacements) {
+    out = out.replace(pattern, value);
+  }
+  return out;
+}
+
 function buildSummary(item) {
   const base = (item.description || "").replace(/\s+/g, " ").trim();
-  if (!base) return `${item.title} - update published by ${item.source}.`;
-  return base.slice(0, 240);
+  if (!base) return `${item.title} - aggiornamento pubblicato da ${item.source}.`;
+
+  // Hacker News RSS entries are very noisy: rewrite to a concise Italian digest.
+  if (item.source === "Hacker News AI") {
+    return `Segnalazione da Hacker News AI: ${item.title}.`;
+  }
+
+  const translated = translateToItalianLocal(base);
+  return translated.slice(0, 240);
 }
 
 export async function analyzeNews(items) {
