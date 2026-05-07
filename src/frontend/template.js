@@ -103,6 +103,7 @@ export function renderHtml(newsItems, meta) {
         designEmpty: "No design news yet today.",
         timeline: "AI Timeline",
         openArticle: "Open article →",
+        openTranslated: "Open translated →",
         showMore: "Show more",
         showLess: "Show less",
         score: "Score",
@@ -123,7 +124,8 @@ export function renderHtml(newsItems, meta) {
         designSpotlightHint: "Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +",
         designEmpty: "Nessuna novità design oggi.",
         timeline: "Timeline AI",
-        openArticle: "Apri articolo →",
+        openArticle: "Apri originale →",
+        openTranslated: "Apri tradotto →",
         showMore: "Mostra di più",
         showLess: "Mostra meno",
         score: "Punteggio",
@@ -251,6 +253,34 @@ export function renderHtml(newsItems, meta) {
       return item.summaryEn || item.summary || "";
     }
 
+    function pickTitle(item) {
+      if (currentLang === "it") return item.titleIt || item.title || "";
+      return item.title || "";
+    }
+
+    function googleTranslateUrl(url) {
+      try {
+        const u = new URL(url);
+        const host = u.host.replace(/\\./g, "-");
+        const params = u.searchParams;
+        params.set("_x_tr_sl", "auto");
+        params.set("_x_tr_tl", "it");
+        params.set("_x_tr_hl", "it");
+        const query = params.toString();
+        return \`https://\${host}.translate.goog\${u.pathname}\${query ? "?" + query : ""}\${u.hash || ""}\`;
+      } catch {
+        return url;
+      }
+    }
+
+    function articleLinks(item) {
+      const dict = I18N[currentLang];
+      const original = \`<a class="text-cyan-300 text-sm" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>\`;
+      if (currentLang !== "it") return original;
+      const translated = \`<a class="text-fuchsia-300 text-sm" href="\${escapeHtml(googleTranslateUrl(item.url))}" target="_blank" rel="noreferrer">\${dict.openTranslated}</a>\`;
+      return \`<div class="flex flex-wrap items-center gap-3">\${original}\${translated}</div>\`;
+    }
+
     function applyI18n() {
       const dict = I18N[currentLang];
       document.documentElement.lang = currentLang;
@@ -282,9 +312,9 @@ export function renderHtml(newsItems, meta) {
               <span class="text-xs px-2 py-1 rounded bg-violet-500/30">\${escapeHtml(topItem.category)}</span>
               <span class="text-xs text-slate-400">\${escapeHtml(topItem.source)}</span>
             </div>
-            <h3 class="mt-2 text-lg md:text-xl font-medium">\${escapeHtml(topItem.title)}</h3>
+            <h3 class="mt-2 text-lg md:text-xl font-medium">\${escapeHtml(pickTitle(topItem))}</h3>
             <p class="mt-2 text-sm text-slate-200">\${escapeHtml(pickSummary(topItem))}</p>
-            <a class="text-violet-300 text-sm mt-3 inline-block" href="\${escapeHtml(topItem.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>
+            <div class="mt-3">\${articleLinks(topItem)}</div>
           </div>
           <div class="text-3xl font-bold text-violet-300">\${topItem.score}/10</div>
         </div>\`
@@ -292,15 +322,14 @@ export function renderHtml(newsItems, meta) {
     }
 
     function renderTopFive(items) {
-      const dict = I18N[currentLang];
       topFive.innerHTML = items.slice(0, 5).map((item, i) => \`
         <article class="rounded-xl border border-white/10 bg-slate-900/80 p-3 transition hover:-translate-y-1 flex flex-col gap-2">
           <p class="text-xs text-slate-400">#\${i + 1} • \${escapeHtml(item.source)}</p>
-          <h3 class="text-sm font-medium line-clamp-3">\${escapeHtml(item.title)}</h3>
+          <h3 class="text-sm font-medium line-clamp-3">\${escapeHtml(pickTitle(item))}</h3>
           <p class="text-xs text-slate-400 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
-          <div class="flex items-center justify-between mt-auto pt-2">
-            <span class="text-xs text-violet-300">\${item.score}/10</span>
-            <a class="text-xs text-cyan-300" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>
+          <div class="flex items-center justify-between mt-auto pt-2 gap-2">
+            <span class="text-xs text-violet-300 flex-shrink-0">\${item.score}/10</span>
+            <div class="text-xs">\${articleLinks(item)}</div>
           </div>
         </article>
       \`).join("");
@@ -319,9 +348,9 @@ export function renderHtml(newsItems, meta) {
             <span class="text-xs px-2 py-1 rounded bg-fuchsia-500/30">\${escapeHtml(item.source)}</span>
             <span class="text-xs text-fuchsia-300">\${item.score}/10</span>
           </div>
-          <h3 class="mt-2 text-sm font-medium line-clamp-3">\${escapeHtml(item.title)}</h3>
+          <h3 class="mt-2 text-sm font-medium line-clamp-3">\${escapeHtml(pickTitle(item))}</h3>
           <p class="mt-2 text-xs text-slate-300 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
-          <a class="text-xs text-cyan-300 mt-2 inline-block" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>
+          <div class="mt-2 text-xs">\${articleLinks(item)}</div>
         </article>
       \`).join("");
     }
@@ -358,11 +387,11 @@ export function renderHtml(newsItems, meta) {
             <span class="text-xs text-slate-500">\${new Date(item.date).toLocaleString(dict.locale)}</span>
             <span class="text-xs text-violet-300">\${dict.score} \${item.score}/10</span>
           </div>
-          <h3 class="mt-2 text-lg font-medium">\${escapeHtml(item.title)}</h3>
+          <h3 class="mt-2 text-lg font-medium">\${escapeHtml(pickTitle(item))}</h3>
           <p class="mt-2 text-sm text-slate-300 summary-text" data-short="\${shortSummary}" data-full="\${summary}">\${shortSummary}</p>
           \${isLong ? \`<button class="toggle-summary text-xs text-violet-300 hover:underline mt-1">\${dict.showMore}</button>\` : ""}
           <p class="mt-2 text-xs text-slate-400">\${(item.keywords || []).map(escapeHtml).join(" • ")}</p>
-          <a class="text-sm text-cyan-300 mt-2 inline-block" href="\${escapeHtml(item.url)}" target="_blank" rel="noreferrer">\${dict.openArticle}</a>
+          <div class="mt-2 text-sm">\${articleLinks(item)}</div>
         </article>
       \`;
       }).join("");

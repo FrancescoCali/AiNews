@@ -1,4 +1,6 @@
 import { VALID_CATEGORIES } from "../config/sources.js";
+import { translateBatch } from "./translate.js";
+import { logger } from "../utils/logger.js";
 
 function localSemanticDedup(items) {
   const seen = new Set();
@@ -166,22 +168,50 @@ function buildItalianSummary(item) {
 
 export async function analyzeNews(items) {
   const deduped = localSemanticDedup(items);
-  return deduped.map((item) => {
+  const intermediate = deduped.map((item) => {
     const category = inferCategory(item);
     const summaryEn = buildEnglishSummary(item);
-    const summaryIt = buildItalianSummary(item);
+    const fallbackSummaryIt = buildItalianSummary(item);
     return {
       title: item.title,
       source: item.source,
       url: item.url,
-      summary: summaryEn,
-      summaryIt,
       summaryEn,
+      fallbackSummaryIt,
       score: computeScore(item, category),
       category,
       date: item.date,
       image: item.image || null,
       keywords: extractKeywords(item)
+    };
+  });
+
+  let translations = {};
+  try {
+    translations = await translateBatch(intermediate);
+  } catch (err) {
+    logger.warn({ err: err.message }, "Translation batch unavailable, using local fallback");
+    translations = {};
+  }
+
+  return intermediate.map((item) => {
+    const key = item.url || `${item.source}::${item.title}`;
+    const t = translations[key];
+    const titleIt = t?.titleIt || item.title;
+    const summaryIt = t?.summaryIt || item.fallbackSummaryIt;
+    return {
+      title: item.title,
+      titleIt,
+      source: item.source,
+      url: item.url,
+      summary: item.summaryEn,
+      summaryEn: item.summaryEn,
+      summaryIt,
+      score: item.score,
+      category: item.category,
+      date: item.date,
+      image: item.image,
+      keywords: item.keywords
     };
   });
 }
