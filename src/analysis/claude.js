@@ -18,10 +18,46 @@ const CATEGORY_KEYWORDS = {
   "Open Source": ["open source", "oss", "github", "community", "weights"],
   "Agentic AI": ["agent", "workflow", "automation", "tool use", "multi-step"],
   "Benchmark": ["benchmark", "eval", "leaderboard", "sota", "score"],
-  "Enterprise AI": ["enterprise", "business", "b2b", "compliance", "security"],
+  "Enterprise AI": ["enterprise", "business", "b2b", "compliance"],
   "Robotics": ["robot", "robotics", "embodied"],
   "AI Video": ["video", "sora", "generation video"],
   "AI Image": ["image", "diffusion", "vision", "text-to-image"],
+  "Amazon": [
+    "amazon",
+    "aws",
+    "bedrock",
+    "sagemaker",
+    "alexa",
+    "titan model",
+    "trainium",
+    "inferentia",
+    "amazon q",
+    "amazon nova",
+    "rekognition",
+    "anthropic on bedrock"
+  ],
+  "AI Security": [
+    "security",
+    "safety",
+    "alignment",
+    "jailbreak",
+    "adversarial",
+    "red team",
+    "red-team",
+    "prompt injection",
+    "vulnerability",
+    "exploit",
+    "threat model",
+    "guardrails",
+    "hidden layer",
+    "lakera",
+    "protect ai",
+    "model risk",
+    "deepfake",
+    "abuse",
+    "data poisoning",
+    "model extraction"
+  ],
   "AI Design": [
     "design",
     "figma",
@@ -78,12 +114,23 @@ function computeScore(item, category) {
   const dateMs = Date.parse(item.date || "");
   const ageHours = Number.isNaN(dateMs) ? 999 : (Date.now() - dateMs) / (1000 * 60 * 60);
 
-  if (["OpenAI Blog", "Anthropic News", "HuggingFace", "Cursor Changelog"].includes(item.source)) score += 2;
+  if (
+    [
+      "OpenAI Blog",
+      "Anthropic News",
+      "HuggingFace",
+      "Cursor Changelog",
+      "AWS Machine Learning Blog",
+      "Amazon Science"
+    ].includes(item.source)
+  ) {
+    score += 2;
+  }
   if (ageHours <= 24) score += 1.5;
   if (ageHours <= 6) score += 0.5;
   if (item.engagement) score += 1;
   if (/(launch|release|introducing|announc|new)/.test(`${title} ${desc}`)) score += 1;
-  if (["LLM", "Agentic AI", "Coding AI", "Benchmark"].includes(category)) score += 0.5;
+  if (["LLM", "Agentic AI", "Coding AI", "Benchmark", "AI Security"].includes(category)) score += 0.5;
 
   return Math.max(1, Math.min(10, Math.round(score)));
 }

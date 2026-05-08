@@ -138,6 +138,12 @@ function isHomepageUrl(url, source) {
   return normalizeUrlForCompare(url) === normalizeUrlForCompare(source.homepage);
 }
 
+function matchesRequiredKeywords(entry, source) {
+  if (!source.requireKeywords || source.requireKeywords.length === 0) return true;
+  const haystack = `${entry.title} ${entry.description} ${(entry.tags || []).join(" ")}`.toLowerCase();
+  return source.requireKeywords.some((kw) => haystack.includes(kw.toLowerCase()));
+}
+
 async function fetchWithFallback(source) {
   const rssAttempt = async () => {
     if (!source.rss) {
@@ -145,10 +151,12 @@ async function fetchWithFallback(source) {
     }
     const feed = await parser.parseURL(source.rss);
     return (feed.items || [])
-      .slice(0, 15)
+      .slice(0, 25)
       .map((item) => normalizeEntry(source, item))
       .filter(Boolean)
-      .filter((entry) => !isHomepageUrl(entry.url, source));
+      .filter((entry) => !isHomepageUrl(entry.url, source))
+      .filter((entry) => matchesRequiredKeywords(entry, source))
+      .slice(0, 15);
   };
 
   const htmlFallback = async () => {
@@ -189,7 +197,9 @@ async function fetchWithFallback(source) {
         categoryHint: source.categoryHint
       });
     });
-    return articles.slice(0, 10);
+    return articles
+      .filter((entry) => matchesRequiredKeywords(entry, source))
+      .slice(0, 10);
   };
 
   try {

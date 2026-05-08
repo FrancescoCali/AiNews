@@ -159,6 +159,56 @@ export const SOURCES = [
     categoryHint: "AI Design",
     rss: "https://www.smashingmagazine.com/feed/",
     homepage: "https://www.smashingmagazine.com/"
+  },
+  {
+    id: "aws-ml-blog",
+    name: "AWS Machine Learning Blog",
+    categoryHint: "Amazon",
+    rss: "https://aws.amazon.com/blogs/machine-learning/feed/",
+    homepage: "https://aws.amazon.com/blogs/machine-learning/"
+  },
+  {
+    id: "amazon-science",
+    name: "Amazon Science",
+    categoryHint: "Amazon",
+    rss: "https://www.amazon.science/index.rss",
+    homepage: "https://www.amazon.science/blog"
+  },
+  {
+    id: "aws-whats-new",
+    name: "AWS What's New",
+    categoryHint: "Amazon",
+    rss: null,
+    homepage: "https://aws.amazon.com/about-aws/whats-new/recent/"
+  },
+  {
+    id: "hiddenlayer-blog",
+    name: "HiddenLayer",
+    categoryHint: "AI Security",
+    rss: null,
+    homepage: "https://hiddenlayer.com/innovation-hub/"
+  },
+  {
+    id: "lakera-blog",
+    name: "Lakera AI",
+    categoryHint: "AI Security",
+    rss: null,
+    homepage: "https://www.lakera.ai/blog"
+  },
+  {
+    id: "protect-ai-blog",
+    name: "Protect AI",
+    categoryHint: "AI Security",
+    rss: null,
+    homepage: "https://protectai.com/blog"
+  },
+  {
+    id: "schneier-security",
+    name: "Schneier on Security",
+    categoryHint: "AI Security",
+    rss: "https://www.schneier.com/feed/atom/",
+    homepage: "https://www.schneier.com/",
+    requireKeywords: ["ai", "artificial intelligence", "machine learning", "llm", "chatgpt", "gpt", "claude", "deepfake", "model", "llama", "agent"]
   }
 ];
 
@@ -172,5 +222,7 @@ export const VALID_CATEGORIES = [
   "Robotics",
   "AI Video",
   "AI Image",
-  "AI Design"
+  "AI Design",
+  "Amazon",
+  "AI Security"
 ];
