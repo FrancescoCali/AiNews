@@ -5,12 +5,40 @@ import { ensureDir, readJson, writeJson } from "../utils/io.js";
 import { logger } from "../utils/logger.js";
 
 const CACHE_FILE = path.join(process.cwd(), "data", "translations.json");
-const limiter = new Bottleneck({ minTime: 250, maxConcurrent: 2 });
+const limiter = new Bottleneck({ minTime: 200, maxConcurrent: 2 });
 const EMAIL = process.env.MYMEMORY_EMAIL || "";
 const MAX_CHARS = 480;
-const MAX_TRANSLATIONS_PER_RUN = Number(process.env.MAX_TRANSLATIONS_PER_RUN || 200);
+const MAX_TRANSLATIONS_PER_RUN = Number(process.env.MAX_TRANSLATIONS_PER_RUN || 400);
 
-async function translateChunk(text, langpair = "en|it") {
+async function translateGoogle(text, source = "en", target = "it") {
+  const { data } = await axios.get("https://translate.googleapis.com/translate_a/single", {
+    params: {
+      client: "gtx",
+      sl: source,
+      tl: target,
+      dt: "t",
+      q: text
+    },
+    timeout: 9000,
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+    }
+  });
+  if (!Array.isArray(data) || !Array.isArray(data[0])) {
+    throw new Error("Google Translate returned unexpected payload");
+  }
+  const out = data[0]
+    .map((segment) => (Array.isArray(segment) ? segment[0] : ""))
+    .filter(Boolean)
+    .join("");
+  if (!out) {
+    throw new Error("Google Translate returned empty translation");
+  }
+  return out;
+}
+
+async function translateMyMemory(text, langpair = "en|it") {
   const params = { q: text, langpair };
   if (EMAIL) params.de = EMAIL;
   const { data } = await axios.get("https://api.mymemory.translated.net/get", {
@@ -22,6 +50,18 @@ async function translateChunk(text, langpair = "en|it") {
     throw new Error("MyMemory returned warning or empty response");
   }
   return translated;
+}
+
+async function translateChunk(text) {
+  try {
+    return await translateGoogle(text);
+  } catch (errGoogle) {
+    try {
+      return await translateMyMemory(text);
+    } catch (errMyMemory) {
+      throw new Error(`Translation providers failed: google=${errGoogle.message}; mymemory=${errMyMemory.message}`);
+    }
+  }
 }
 
 function chunkText(text, max = MAX_CHARS) {

@@ -239,9 +239,11 @@ export async function analyzeNews(items) {
     translations = {};
   }
 
-  return intermediate.map((item) => {
+  const finalItems = intermediate.map((item) => {
     const key = item.url || `${item.source}::${item.title}`;
     const t = translations[key] || {};
+    const titleTranslated = Boolean(t.titleIt);
+    const summaryTranslated = Boolean(t.summaryIt);
     const titleIt = t.titleIt || item.title;
     const summaryIt = t.summaryIt || item.fallbackSummaryIt;
     return {
@@ -256,7 +258,70 @@ export async function analyzeNews(items) {
       category: item.category,
       date: item.date,
       image: item.image,
-      keywords: item.keywords
+      keywords: item.keywords,
+      _titleTranslated: titleTranslated,
+      _summaryTranslated: summaryTranslated
     };
   });
+
+  reportCoverage(finalItems);
+
+  return finalItems.map((item) => {
+    const { _titleTranslated, _summaryTranslated, ...rest } = item;
+    return rest;
+  });
+}
+
+function reportCoverage(items) {
+  const bySource = {};
+  const byCategory = {};
+  let titleOk = 0;
+  let summaryOk = 0;
+
+  for (const item of items) {
+    const sourceBucket = (bySource[item.source] = bySource[item.source] || {
+      total: 0,
+      titleOk: 0,
+      summaryOk: 0
+    });
+    const catBucket = (byCategory[item.category] = byCategory[item.category] || {
+      total: 0,
+      titleOk: 0,
+      summaryOk: 0
+    });
+    sourceBucket.total++;
+    catBucket.total++;
+    if (item._titleTranslated) {
+      sourceBucket.titleOk++;
+      catBucket.titleOk++;
+      titleOk++;
+    }
+    if (item._summaryTranslated) {
+      sourceBucket.summaryOk++;
+      catBucket.summaryOk++;
+      summaryOk++;
+    }
+  }
+
+  const total = items.length;
+  logger.info(
+    {
+      total,
+      titleCoveragePct: total ? Math.round((titleOk * 100) / total) : 0,
+      summaryCoveragePct: total ? Math.round((summaryOk * 100) / total) : 0,
+      bySource,
+      byCategory
+    },
+    "Translation coverage report"
+  );
+
+  for (const [source, stats] of Object.entries(bySource)) {
+    if (stats.total === 0) continue;
+    if (stats.titleOk === 0 || stats.summaryOk === 0) {
+      logger.warn(
+        { source, stats },
+        "Source has zero translated titles or summaries"
+      );
+    }
+  }
 }
