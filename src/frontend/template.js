@@ -76,20 +76,6 @@ export function renderHtml(newsItems, meta) {
       <div id="trendBars" class="rounded-2xl border border-white/10 bg-glass backdrop-blur p-4 space-y-3"></div>
     </section>
 
-    <section class="mb-10">
-      <div class="flex items-center justify-between mb-3 gap-3 flex-wrap">
-        <div class="flex items-center gap-2">
-          <h2 class="text-xl font-semibold" data-i18n="designSpotlight">Design Spotlight</h2>
-          <button type="button" class="score-info-btn text-slate-400 hover:text-fuchsia-300 transition" aria-label="Score info" data-i18n-aria="scoreInfoButton">
-            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-1.5 3.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z" clip-rule="evenodd" /></svg>
-          </button>
-        </div>
-        <span class="text-xs text-slate-500" data-i18n="designSpotlightHint">Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +</span>
-      </div>
-      <p class="text-xs text-slate-500 mb-3" data-i18n="designScoreNote">Same scoring logic applies to design news.</p>
-      <div id="designSpotlight" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-    </section>
-
     <section>
       <h2 class="text-xl font-semibold mb-3" data-i18n="timeline">AI Timeline</h2>
       <div id="timeline" class="space-y-4"></div>
@@ -128,9 +114,6 @@ export function renderHtml(newsItems, meta) {
         mostImportant: "Most Important Today",
         topFive: "Daily Top 5",
         rankingTrend: "Ranking Trend",
-        designSpotlight: "Design Spotlight",
-        designSpotlightHint: "Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +",
-        designEmpty: "No design news yet today.",
         timeline: "AI Timeline",
         openArticle: "Open article →",
         openTranslated: "Open translated →",
@@ -148,7 +131,6 @@ export function renderHtml(newsItems, meta) {
         scoreInfoCap: "Final result clamped between 1 and 10.",
         scoreInfoButton: "Score info",
         close: "Close",
-        designScoreNote: "Same scoring logic applies to design news.",
         noData: "No data available.",
         locale: "en-US"
       },
@@ -162,9 +144,6 @@ export function renderHtml(newsItems, meta) {
         mostImportant: "Più importanti di oggi",
         topFive: "Top 5 giornaliera",
         rankingTrend: "Trend ranking",
-        designSpotlight: "Vetrina Design",
-        designSpotlightHint: "Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +",
-        designEmpty: "Nessuna novità design oggi.",
         timeline: "Timeline AI",
         openArticle: "Apri originale →",
         openTranslated: "Apri tradotto →",
@@ -182,7 +161,6 @@ export function renderHtml(newsItems, meta) {
         scoreInfoCap: "Risultato finale limitato tra 1 e 10.",
         scoreInfoButton: "Info punteggio",
         close: "Chiudi",
-        designScoreNote: "Stessa logica di punteggio per le novità design.",
         noData: "Nessun dato disponibile.",
         locale: "it-IT"
       }
@@ -220,24 +198,6 @@ export function renderHtml(newsItems, meta) {
     const topFive = document.getElementById("topFive");
     const mostImportant = document.getElementById("mostImportant");
     const trendBars = document.getElementById("trendBars");
-    const designSpotlight = document.getElementById("designSpotlight");
-    const DESIGN_SOURCES = new Set([
-      "Figma Blog",
-      "Canva Newsroom",
-      "Adobe Blog",
-      "Framer Blog",
-      "Webflow Blog",
-      "Spline",
-      "Sketch Blog",
-      "Runway",
-      "Midjourney Updates",
-      "Stability AI News",
-      "Leonardo AI",
-      "Ideogram",
-      "Krea AI",
-      "Recraft",
-      "Smashing Magazine"
-    ]);
 
     const sorted = [...rawData].sort((a, b) => b.score - a.score);
 
@@ -444,26 +404,6 @@ export function renderHtml(newsItems, meta) {
       \`).join("");
     }
 
-    function renderDesignSpotlight(items) {
-      const dict = I18N[currentLang];
-      const designItems = items.filter((item) => item.category === "AI Design" || DESIGN_SOURCES.has(item.source));
-      if (designItems.length === 0) {
-        designSpotlight.innerHTML = \`<p class="text-sm text-slate-500 col-span-full">\${dict.designEmpty}</p>\`;
-        return;
-      }
-      designSpotlight.innerHTML = designItems.slice(0, 6).map((item) => \`
-        <article class="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/5 p-4 transition hover:-translate-y-1">
-          <div class="flex items-center justify-between gap-2">
-            <span class="text-xs px-2 py-1 rounded bg-fuchsia-500/30">\${escapeHtml(item.source)}</span>
-            \${scoreBadge(item.score, { colorClass: "text-fuchsia-300" })}
-          </div>
-          <h3 class="mt-2 text-sm font-medium line-clamp-3">\${escapeHtml(pickTitle(item))}</h3>
-          <p class="mt-2 text-xs text-slate-300 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
-          <div class="mt-2 text-xs">\${articleLinks(item)}</div>
-        </article>
-      \`).join("");
-    }
-
     function renderTrend(items) {
       const grouped = items.reduce((acc, item) => {
         acc[item.category] = acc[item.category] || [];
@@ -531,7 +471,6 @@ export function renderHtml(newsItems, meta) {
       renderTimeline(filtered);
       renderTopFive(filtered);
       renderTrend(filtered);
-      renderDesignSpotlight(filtered);
     }
 
     function setLanguage(lang) {
