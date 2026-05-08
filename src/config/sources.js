@@ -163,21 +163,21 @@ export const SOURCES = [
   {
     id: "aws-ml-blog",
     name: "AWS Machine Learning Blog",
-    categoryHint: "Amazon",
+    categoryHint: "Enterprise AI",
     rss: "https://aws.amazon.com/blogs/machine-learning/feed/",
     homepage: "https://aws.amazon.com/blogs/machine-learning/"
   },
   {
     id: "amazon-science",
     name: "Amazon Science",
-    categoryHint: "Amazon",
+    categoryHint: "LLM",
     rss: "https://www.amazon.science/index.rss",
     homepage: "https://www.amazon.science/blog"
   },
   {
     id: "aws-whats-new",
     name: "AWS What's New",
-    categoryHint: "Amazon",
+    categoryHint: "Enterprise AI",
     rss: null,
     homepage: "https://aws.amazon.com/about-aws/whats-new/recent/"
   },
@@ -223,6 +223,5 @@ export const VALID_CATEGORIES = [
   "AI Video",
   "AI Image",
   "AI Design",
-  "Amazon",
   "AI Security"
 ];

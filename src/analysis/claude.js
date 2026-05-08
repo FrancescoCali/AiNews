@@ -18,24 +18,22 @@ const CATEGORY_KEYWORDS = {
   "Open Source": ["open source", "oss", "github", "community", "weights"],
   "Agentic AI": ["agent", "workflow", "automation", "tool use", "multi-step"],
   "Benchmark": ["benchmark", "eval", "leaderboard", "sota", "score"],
-  "Enterprise AI": ["enterprise", "business", "b2b", "compliance"],
-  "Robotics": ["robot", "robotics", "embodied"],
-  "AI Video": ["video", "sora", "generation video"],
-  "AI Image": ["image", "diffusion", "vision", "text-to-image"],
-  "Amazon": [
-    "amazon",
+  "Enterprise AI": [
+    "enterprise",
+    "business",
+    "b2b",
+    "compliance",
     "aws",
     "bedrock",
     "sagemaker",
-    "alexa",
-    "titan model",
     "trainium",
     "inferentia",
     "amazon q",
-    "amazon nova",
-    "rekognition",
-    "anthropic on bedrock"
+    "rekognition"
   ],
+  "Robotics": ["robot", "robotics", "embodied"],
+  "AI Video": ["video", "sora", "generation video"],
+  "AI Image": ["image", "diffusion", "vision", "text-to-image"],
   "AI Security": [
     "security",
     "safety",

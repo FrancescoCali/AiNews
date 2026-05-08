@@ -57,7 +57,12 @@ export function renderHtml(newsItems, meta) {
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-3" data-i18n="mostImportant">Most Important Today</h2>
+      <div class="flex items-center gap-2 mb-3">
+        <h2 class="text-xl font-semibold" data-i18n="mostImportant">Most Important Today</h2>
+        <button type="button" class="score-info-btn text-slate-400 hover:text-violet-300 transition" aria-label="Score info" data-i18n-aria="scoreInfoButton">
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-1.5 3.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z" clip-rule="evenodd" /></svg>
+        </button>
+      </div>
       <div id="mostImportant" class="rounded-2xl border border-violet-400/30 bg-violet-500/10 p-5"></div>
     </section>
 
@@ -72,10 +77,16 @@ export function renderHtml(newsItems, meta) {
     </section>
 
     <section class="mb-10">
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xl font-semibold" data-i18n="designSpotlight">Design Spotlight</h2>
+      <div class="flex items-center justify-between mb-3 gap-3 flex-wrap">
+        <div class="flex items-center gap-2">
+          <h2 class="text-xl font-semibold" data-i18n="designSpotlight">Design Spotlight</h2>
+          <button type="button" class="score-info-btn text-slate-400 hover:text-fuchsia-300 transition" aria-label="Score info" data-i18n-aria="scoreInfoButton">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-1.5 3.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z" clip-rule="evenodd" /></svg>
+          </button>
+        </div>
         <span class="text-xs text-slate-500" data-i18n="designSpotlightHint">Figma, Canva, Adobe, Runway, Midjourney, Leonardo, Krea, Recraft +</span>
       </div>
+      <p class="text-xs text-slate-500 mb-3" data-i18n="designScoreNote">Same scoring logic applies to design news.</p>
       <div id="designSpotlight" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </section>
 
@@ -84,6 +95,25 @@ export function renderHtml(newsItems, meta) {
       <div id="timeline" class="space-y-4"></div>
     </section>
   </main>
+
+  <div id="scoreInfoModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="max-w-md w-full rounded-2xl border border-violet-400/30 bg-slate-900 p-6 relative shadow-2xl" id="scoreInfoCard">
+      <button type="button" id="scoreInfoClose" class="absolute top-3 right-3 text-slate-400 hover:text-white transition w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800" aria-label="Close">
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.28 4.22a.75.75 0 011.06 0L10 8.94l4.66-4.72a.75.75 0 111.06 1.06L11.06 10l4.66 4.72a.75.75 0 11-1.06 1.06L10 11.06l-4.66 4.72a.75.75 0 11-1.06-1.06L8.94 10 4.28 5.28a.75.75 0 010-1.06z" clip-rule="evenodd" /></svg>
+      </button>
+      <h3 class="text-lg font-semibold text-violet-200 mb-3" data-i18n="scoreInfoTitle">How is the score calculated?</h3>
+      <p class="text-sm text-slate-300 mb-3" data-i18n="scoreInfoIntro"></p>
+      <ul class="text-sm text-slate-200 space-y-2 list-disc list-inside marker:text-violet-400">
+        <li data-i18n="scoreInfoBase"></li>
+        <li data-i18n="scoreInfoSource"></li>
+        <li data-i18n="scoreInfoRecency"></li>
+        <li data-i18n="scoreInfoEngagement"></li>
+        <li data-i18n="scoreInfoLaunch"></li>
+        <li data-i18n="scoreInfoCategory"></li>
+        <li class="text-slate-400 italic" data-i18n="scoreInfoCap"></li>
+      </ul>
+    </div>
+  </div>
 
   <script id="news-data" type="application/json">${dataBase64}</script>
   <script>
@@ -107,6 +137,18 @@ export function renderHtml(newsItems, meta) {
         showMore: "Show more",
         showLess: "Show less",
         score: "Score",
+        scoreInfoTitle: "How is the score calculated?",
+        scoreInfoIntro: "Each article gets a 1–10 score that combines:",
+        scoreInfoBase: "Base score: 4 points.",
+        scoreInfoSource: "+2 for high-trust sources (OpenAI, Anthropic, HuggingFace, Cursor, AWS ML Blog, Amazon Science).",
+        scoreInfoRecency: "+1.5 if published within 24 hours, +0.5 extra if within 6 hours.",
+        scoreInfoEngagement: "+1 if community engagement is detected (votes/comments).",
+        scoreInfoLaunch: "+1 if title or description signals a launch, release, or announcement.",
+        scoreInfoCategory: "+0.5 for high-impact categories: LLM, Agentic AI, Coding AI, Benchmark, AI Security.",
+        scoreInfoCap: "Final result clamped between 1 and 10.",
+        scoreInfoButton: "Score info",
+        close: "Close",
+        designScoreNote: "Same scoring logic applies to design news.",
         noData: "No data available.",
         locale: "en-US"
       },
@@ -129,6 +171,18 @@ export function renderHtml(newsItems, meta) {
         showMore: "Mostra di più",
         showLess: "Mostra meno",
         score: "Punteggio",
+        scoreInfoTitle: "Come si calcola il punteggio?",
+        scoreInfoIntro: "Ogni articolo riceve un punteggio da 1 a 10 calcolato così:",
+        scoreInfoBase: "Punteggio base: 4 punti.",
+        scoreInfoSource: "+2 per fonti ad alta affidabilità (OpenAI, Anthropic, HuggingFace, Cursor, AWS ML Blog, Amazon Science).",
+        scoreInfoRecency: "+1,5 se pubblicato nelle ultime 24 ore, +0,5 extra se nelle ultime 6 ore.",
+        scoreInfoEngagement: "+1 se rileva interazione della community (voti, commenti).",
+        scoreInfoLaunch: "+1 se titolo o descrizione contengono segnali di lancio, rilascio o annuncio.",
+        scoreInfoCategory: "+0,5 per categorie ad alto impatto: LLM, Agentic AI, Coding AI, Benchmark, AI Security.",
+        scoreInfoCap: "Risultato finale limitato tra 1 e 10.",
+        scoreInfoButton: "Info punteggio",
+        close: "Chiudi",
+        designScoreNote: "Stessa logica di punteggio per le novità design.",
         noData: "Nessun dato disponibile.",
         locale: "it-IT"
       }
@@ -281,6 +335,52 @@ export function renderHtml(newsItems, meta) {
       return \`<div class="flex flex-wrap items-center gap-3">\${original}\${translated}</div>\`;
     }
 
+    function scoreBadge(score, options) {
+      const opts = options || {};
+      const colorClass = opts.colorClass || "text-violet-300";
+      const sizeClass = opts.sizeClass || "text-xs";
+      const iconClass = opts.iconClass || "w-3.5 h-3.5";
+      const label = opts.showLabel ? (I18N[currentLang].score + " ") : "";
+      return \`
+        <span class="inline-flex items-center gap-1 \${sizeClass} \${colorClass}">
+          <span>\${label}\${score}/10</span>
+          <button type="button" class="score-info-btn text-slate-400 hover:\${colorClass.replace("text-", "text-")} transition" aria-label="\${I18N[currentLang].scoreInfoButton}">
+            <svg class="\${iconClass}" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-1.5 3.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z" clip-rule="evenodd" /></svg>
+          </button>
+        </span>
+      \`;
+    }
+
+    const scoreInfoModal = document.getElementById("scoreInfoModal");
+    const scoreInfoClose = document.getElementById("scoreInfoClose");
+    const scoreInfoCard = document.getElementById("scoreInfoCard");
+
+    function openScoreInfo() {
+      scoreInfoModal.classList.remove("hidden");
+    }
+
+    function closeScoreInfo() {
+      scoreInfoModal.classList.add("hidden");
+    }
+
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest(".score-info-btn");
+      if (trigger) {
+        e.stopPropagation();
+        openScoreInfo();
+        return;
+      }
+      if (!scoreInfoModal.classList.contains("hidden") && !scoreInfoCard.contains(e.target)) {
+        closeScoreInfo();
+      }
+    });
+
+    scoreInfoClose.addEventListener("click", closeScoreInfo);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeScoreInfo();
+    });
+
     function applyI18n() {
       const dict = I18N[currentLang];
       document.documentElement.lang = currentLang;
@@ -293,6 +393,10 @@ export function renderHtml(newsItems, meta) {
       document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
         const key = el.getAttribute("data-i18n-placeholder");
         if (dict[key]) el.placeholder = dict[key];
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+        const key = el.getAttribute("data-i18n-aria");
+        if (dict[key]) el.setAttribute("aria-label", dict[key]);
       });
       document.querySelectorAll(".lang-btn").forEach((btn) => {
         const isActive = btn.dataset.langBtn === currentLang;
@@ -316,7 +420,12 @@ export function renderHtml(newsItems, meta) {
             <p class="mt-2 text-sm text-slate-200">\${escapeHtml(pickSummary(topItem))}</p>
             <div class="mt-3">\${articleLinks(topItem)}</div>
           </div>
-          <div class="text-3xl font-bold text-violet-300">\${topItem.score}/10</div>
+          <div class="flex items-center gap-1 text-3xl font-bold text-violet-300">
+            <span>\${topItem.score}/10</span>
+            <button type="button" class="score-info-btn text-slate-400 hover:text-violet-300 transition" aria-label="\${dict.scoreInfoButton}">
+              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm-1.5 3.75a.75.75 0 011.5 0v4a.75.75 0 01-1.5 0v-4z" clip-rule="evenodd" /></svg>
+            </button>
+          </div>
         </div>\`
         : \`<p>\${dict.noData}</p>\`;
     }
@@ -328,7 +437,7 @@ export function renderHtml(newsItems, meta) {
           <h3 class="text-sm font-medium line-clamp-3">\${escapeHtml(pickTitle(item))}</h3>
           <p class="text-xs text-slate-400 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
           <div class="flex items-center justify-between mt-auto pt-2 gap-2">
-            <span class="text-xs text-violet-300 flex-shrink-0">\${item.score}/10</span>
+            \${scoreBadge(item.score, { colorClass: "text-violet-300" })}
             <div class="text-xs">\${articleLinks(item)}</div>
           </div>
         </article>
@@ -346,7 +455,7 @@ export function renderHtml(newsItems, meta) {
         <article class="rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/5 p-4 transition hover:-translate-y-1">
           <div class="flex items-center justify-between gap-2">
             <span class="text-xs px-2 py-1 rounded bg-fuchsia-500/30">\${escapeHtml(item.source)}</span>
-            <span class="text-xs text-fuchsia-300">\${item.score}/10</span>
+            \${scoreBadge(item.score, { colorClass: "text-fuchsia-300" })}
           </div>
           <h3 class="mt-2 text-sm font-medium line-clamp-3">\${escapeHtml(pickTitle(item))}</h3>
           <p class="mt-2 text-xs text-slate-300 line-clamp-4">\${escapeHtml(pickSummary(item))}</p>
@@ -385,7 +494,7 @@ export function renderHtml(newsItems, meta) {
             <span class="text-xs px-2 py-1 rounded bg-slate-800">\${escapeHtml(item.category)}</span>
             <span class="text-xs text-slate-400">\${escapeHtml(item.source)}</span>
             <span class="text-xs text-slate-500">\${new Date(item.date).toLocaleString(dict.locale)}</span>
-            <span class="text-xs text-violet-300">\${dict.score} \${item.score}/10</span>
+            \${scoreBadge(item.score, { colorClass: "text-violet-300", showLabel: true })}
           </div>
           <h3 class="mt-2 text-lg font-medium">\${escapeHtml(pickTitle(item))}</h3>
           <p class="mt-2 text-sm text-slate-300 summary-text" data-short="\${shortSummary}" data-full="\${summary}">\${shortSummary}</p>
