@@ -43,6 +43,8 @@ jobs:
             translations-cache-
 
       - name: Build all pipeline steps
+        env:
+          MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
         run: npm run build:all
 
       - name: Setup Pages

@@ -54,46 +54,71 @@ async function translateText(text) {
   return out.join(" ");
 }
 
+async function safeTranslate(text) {
+  try {
+    return await translateText(text);
+  } catch (err) {
+    logger.warn({ err: err.message }, "Single translation failed");
+    return null;
+  }
+}
+
 export async function translateBatch(items) {
   await ensureDir(path.dirname(CACHE_FILE));
   const cache = (await readJson(CACHE_FILE, {})) || {};
   const results = {};
-  let translated = 0;
+  let titleHits = 0;
+  let summaryHits = 0;
   let cachedCount = 0;
-  let failed = 0;
-  let skipped = 0;
+  let titleFails = 0;
+  let summaryFails = 0;
 
-  for (const item of items) {
+  const work = items.map((item) => {
     const key = item.url || `${item.source}::${item.title}`;
-    const cacheEntry = cache[key];
-    const baseSummary = item.summaryEn || item.summary || "";
     const baseTitle = item.title || "";
-
-    if (cacheEntry && cacheEntry.titleSrc === baseTitle && cacheEntry.summarySrc === baseSummary) {
-      results[key] = { titleIt: cacheEntry.titleIt, summaryIt: cacheEntry.summaryIt };
+    const baseSummary = item.summaryEn || item.summary || "";
+    const cacheEntry = cache[key] || {};
+    const hasTitle = cacheEntry.titleSrc === baseTitle && cacheEntry.titleIt;
+    const hasSummary = cacheEntry.summarySrc === baseSummary && cacheEntry.summaryIt;
+    if (hasTitle && hasSummary) {
       cachedCount++;
-      continue;
-    }
-
-    if (translated >= MAX_TRANSLATIONS_PER_RUN) {
-      skipped++;
-      continue;
-    }
-
-    try {
-      const titleIt = await translateText(baseTitle);
-      const summaryIt = await translateText(baseSummary);
-      cache[key] = {
-        titleSrc: baseTitle,
-        summarySrc: baseSummary,
-        titleIt,
-        summaryIt
+      results[key] = { titleIt: cacheEntry.titleIt, summaryIt: cacheEntry.summaryIt };
+    } else {
+      results[key] = {
+        titleIt: hasTitle ? cacheEntry.titleIt : null,
+        summaryIt: hasSummary ? cacheEntry.summaryIt : null
       };
-      results[key] = { titleIt, summaryIt };
-      translated++;
-    } catch (err) {
-      logger.warn({ err: err.message, url: key }, "Translation failed for item");
-      failed++;
+    }
+    cache[key] = cache[key] || {};
+    return { key, baseTitle, baseSummary, hasTitle, hasSummary };
+  });
+
+  for (const w of work) {
+    if (w.hasTitle) continue;
+    if (titleHits + summaryHits >= MAX_TRANSLATIONS_PER_RUN) break;
+    const titleIt = await safeTranslate(w.baseTitle);
+    if (titleIt) {
+      cache[w.key].titleSrc = w.baseTitle;
+      cache[w.key].titleIt = titleIt;
+      results[w.key].titleIt = titleIt;
+      titleHits++;
+    } else {
+      titleFails++;
+    }
+  }
+
+  for (const w of work) {
+    if (w.hasSummary) continue;
+    if (titleHits + summaryHits >= MAX_TRANSLATIONS_PER_RUN) break;
+    if (!w.baseSummary) continue;
+    const summaryIt = await safeTranslate(w.baseSummary);
+    if (summaryIt) {
+      cache[w.key].summarySrc = w.baseSummary;
+      cache[w.key].summaryIt = summaryIt;
+      results[w.key].summaryIt = summaryIt;
+      summaryHits++;
+    } else {
+      summaryFails++;
     }
   }
 
@@ -104,6 +129,9 @@ export async function translateBatch(items) {
   }
 
   await writeJson(CACHE_FILE, cache);
-  logger.info({ translated, cached: cachedCount, failed, skipped }, "Translation batch completed");
+  logger.info(
+    { titleHits, summaryHits, cached: cachedCount, titleFails, summaryFails },
+    "Translation batch completed"
+  );
   return results;
 }

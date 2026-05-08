@@ -43,6 +43,74 @@ function isValidArticleUrl(url = "") {
   return /^https?:\/\//.test(lower);
 }
 
+const NON_ARTICLE_PATH_HINTS = [
+  "/leaderboard",
+  "/pricing",
+  "/signup",
+  "/login",
+  "/contact",
+  "/support",
+  "/careers",
+  "/jobs",
+  "/about",
+  "/demo",
+  "/download",
+  "/docs/",
+  "/legal",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/feed",
+  "/rss",
+  "/subscribe"
+];
+
+function looksLikeNonArticle(url = "") {
+  try {
+    const u = new URL(url);
+    const path = u.pathname.toLowerCase();
+    if (path === "/" || path === "") return true;
+    return NON_ARTICLE_PATH_HINTS.some((hint) => path === hint || path.startsWith(hint + "/") || path.endsWith(hint));
+  } catch {
+    return false;
+  }
+}
+
+function extractTextWithSpaces($, el) {
+  if (!el) return "";
+  let result = "";
+  $(el).contents().each((_, node) => {
+    if (node.type === "text") {
+      result += node.data || "";
+    } else if (node.type === "tag") {
+      result += " " + extractTextWithSpaces($, node) + " ";
+    }
+  });
+  return result.replace(/\s+/g, " ").trim();
+}
+
+const TITLE_NOISE_PREFIXES = [
+  /^[A-Z][a-z]+\s+\d{1,2},\s+\d{4}\s*/,
+  /^\d{1,2}\s+[A-Z][a-z]+\s+\d{4}\s*/,
+  /^(Announcements|Product|Policy|Research|News|Newsroom|Blog|Update|Updates)\s+/i
+];
+
+function cleanTitle(text = "") {
+  let t = text.replace(/\s+/g, " ").trim();
+  for (let i = 0; i < 3; i++) {
+    let changed = false;
+    for (const pattern of TITLE_NOISE_PREFIXES) {
+      const next = t.replace(pattern, "");
+      if (next !== t) {
+        t = next.trim();
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+  return t;
+}
+
 function extractImage(item, html = "") {
   if (item.enclosure?.url) return item.enclosure.url;
   const media = item?.["media:content"]?.url || item?.["media:thumbnail"]?.url;
@@ -115,7 +183,7 @@ function normalizeEntry(source, item) {
   if (!rawUrl || !rawUrl.startsWith("http")) return null;
   const url = rawUrl.split("#")[0];
   return {
-    title: item.title?.trim() || "Untitled",
+    title: cleanTitle(item.title || "") || "Untitled",
     source: source.name,
     sourceId: source.id,
     url,
@@ -167,8 +235,15 @@ async function fetchWithFallback(source) {
     const $ = cheerio.load(response.data);
     const articles = [];
     $("article, .post, li").each((_, el) => {
-      const title = $(el).find("h1,h2,h3,a").first().text().trim();
-      const link = $(el).find("a[href]").first().attr("href");
+      const headingEl = $(el).find("h1, h2, h3, h4").first();
+      const anchorEl = $(el).find("a[href]").first();
+      let title = headingEl.length
+        ? extractTextWithSpaces($, headingEl[0])
+        : anchorEl.length
+          ? extractTextWithSpaces($, anchorEl[0])
+          : "";
+      title = cleanTitle(title);
+      const link = anchorEl.attr("href");
       if (!title || !link) return;
       let absLink;
       try {
@@ -181,8 +256,10 @@ async function fetchWithFallback(source) {
       absLink = absLink.split("#")[0];
       if (!/^https?:\/\//i.test(absLink)) return;
       if (isHomepageUrl(absLink, source)) return;
+      if (looksLikeNonArticle(absLink)) return;
 
-      const description = $(el).find("p").first().text().trim();
+      const descEl = $(el).find("p").first();
+      const description = descEl.length ? extractTextWithSpaces($, descEl[0]) : "";
       articles.push({
         title,
         source: source.name,
@@ -237,6 +314,7 @@ export async function collectNews() {
     .flat()
     .filter((item) => isValidArticleUrl(item.url))
     .filter((item) => !homepageSet.has(normalizeUrlForCompare(item.url)))
+    .filter((item) => !looksLikeNonArticle(item.url))
     .filter((item) => !isLikelyJunkTitle(item.title))
     .filter((item) => {
       const key = `${item.url}|${item.title}`.toLowerCase();

@@ -241,9 +241,9 @@ export async function analyzeNews(items) {
 
   return intermediate.map((item) => {
     const key = item.url || `${item.source}::${item.title}`;
-    const t = translations[key];
-    const titleIt = t?.titleIt || item.title;
-    const summaryIt = t?.summaryIt || item.fallbackSummaryIt;
+    const t = translations[key] || {};
+    const titleIt = t.titleIt || item.title;
+    const summaryIt = t.summaryIt || item.fallbackSummaryIt;
     return {
       title: item.title,
       titleIt,
