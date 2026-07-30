@@ -1,110 +1,43 @@
-# AI News Aggregator Platform (100% Free Mode)
+# AI News Radar
 
-Piattaforma autonoma che esegue ogni giorno scraping AI news, analisi locale gratuita (senza API key), generazione dashboard HTML (Tailwind) e deploy automatico su GitHub Pages.
+AI News Radar e un sito che raccoglie ogni giorno le principali notizie sull'intelligenza artificiale e le presenta in modo chiaro, con classifica, filtri e riassunti rapidi.
 
-## Stack
+## Cosa fa
 
-- Apify-ready modular scraper (`src/apify/main.js`)
-- Workflow orchestration con `parallel.workflow.json`
-- Analisi e sintesi locale rule-based (`src/analysis/claude.js`)
-- Frontend statico moderno in `public/index.html`
-- Deploy automatico su GitHub Pages via GitHub Actions
+- Aggiorna automaticamente i contenuti ogni giorno.
+- Mostra le notizie piu importanti in evidenza.
+- Organizza le news per categoria e fonte.
+- Permette ricerca e filtri veloci.
+- Offre modalita multilingua (inglese/italiano).
 
-## Struttura progetto
+## A chi serve
 
-```txt
-.
-├─ .github/workflows/daily-news.yml
-├─ data/
-│  ├─ raw-news.json
-│  ├─ news.json
-│  └─ analytics.json
-├─ public/
-│  └─ index.html
-├─ src/
-│  ├─ apify/main.js
-│  ├─ analysis/claude.js
-│  ├─ config/sources.js
-│  ├─ frontend/template.js
-│  ├─ pipeline/build-digest.js
-│  ├─ scraping/collector.js
-│  └─ utils/{io.js,logger.js}
-├─ parallel.workflow.json
-├─ package.json
-└─ vercel.json
-```
+- Team innovation e R&D.
+- Professionisti tech e digital.
+- Manager che vogliono una vista sintetica delle novita AI.
+- Chiunque voglia seguire l'AI senza leggere decine di siti separati.
 
-## Requisiti
+## Come funziona, in pratica
 
-- Node.js 20+
-- Repository GitHub con Pages abilitato
+1. Il sistema recupera le notizie da fonti ufficiali.
+2. Le normalizza e rimuove i duplicati.
+3. Assegna un punteggio di rilevanza.
+4. Genera automaticamente la dashboard pubblica.
+5. Pubblica online il sito senza intervento manuale.
 
-## Setup
+## Cosa vedi nel sito
 
-1. Installa dipendenze:
-   ```bash
-   npm install
-   ```
-2. Copia variabili ambiente:
-   ```bash
-   cp .env.example .env
-   ```
-3. Compila pipeline completa in locale:
-   ```bash
-   npm run build:all
-   ```
+- Sezione "Piu importanti di oggi".
+- Top 5 giornaliera.
+- Timeline con le ultime uscite.
+- Filtri per categoria e fonte.
+- Indicatore informativo su come viene calcolato lo score.
 
-## Output JSON finale
+## Trasparenza AI
 
-Il file `data/news.json` contiene array di oggetti nel formato:
+Questo progetto utilizza strumenti di intelligenza artificiale per raccolta, sintesi e traduzione delle notizie. I contenuti sono automatizzati e possono contenere imprecisioni. Verificare sempre i dettagli sulle fonti originali.
 
-```json
-{
-  "title": "string",
-  "source": "string",
-  "url": "string",
-  "summary": "string",
-  "score": 1,
-  "category": "LLM",
-  "date": "2026-05-06T09:00:00.000Z",
-  "image": "string|null",
-  "keywords": ["string"]
-}
-```
+## Link ufficiali
 
-## Scheduling giornaliero 09:00
-
-- `parallel.workflow.json`: schedule `30 8 * * *` timezone `Europe/Rome`
-- `.github/workflows/daily-news.yml`: doppio cron UTC (`30 6 * * *` e `30 7 * * *`) per coprire ora legale e ora solare italiana (08:30 Italia).
-
-## Ottimizzazioni implementate
-
-- Retry scraping (`p-retry`)
-- Anti-rate-limit (`bottleneck`)
-- Fallback RSS -> scraping HTML
-- Deduplica semantica locale + classificazione/score locale
-- Cache dati locali (`data/raw-news.json`, `data/news.json`)
-- Logging strutturato (`pino`)
-- Analytics base run-by-run (`data/analytics.json`)
-
-## Fonti integrate
-
-- OpenAI Blog
-- Anthropic News
-- HuggingFace
-- Hacker News AI
-- Reddit AI communities
-- Cursor changelog
-- Perplexity blog
-- LangChain changelog
-
-## Deploy gratuito su GitHub Pages
-
-Nessun token custom richiesto.
-
-1. Pusha il repository su GitHub
-2. Vai su `Settings -> Pages`
-3. Source: **GitHub Actions**
-4. Abilita workflow Actions
-
-Da quel momento l'update quotidiano e la pubblicazione sono automatici.
+- Repository: https://github.com/ApSystemSrl/AiNews
+- Sito live: https://apsystemsrl.github.io/AiNews/
