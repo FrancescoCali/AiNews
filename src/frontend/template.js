@@ -80,6 +80,11 @@ export function renderHtml(newsItems, meta) {
       <h2 class="text-xl font-semibold mb-3" data-i18n="timeline">AI Timeline</h2>
       <div id="timeline" class="space-y-4"></div>
     </section>
+    <footer class="mt-10 pt-6 border-t border-white/10">
+      <p class="text-xs text-slate-500" data-i18n="aiTransparency">
+        AI Transparency: this site is built with artificial intelligence tools for news collection, summarization, and translation. Content is automated and may contain inaccuracies.
+      </p>
+    </footer>
   </main>
 
   <div id="scoreInfoModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
@@ -131,6 +136,7 @@ export function renderHtml(newsItems, meta) {
         scoreInfoCap: "Final result clamped between 1 and 10.",
         scoreInfoButton: "Score info",
         close: "Close",
+        aiTransparency: "AI Transparency: this site is built with artificial intelligence tools for news collection, summarization, and translation. Content is automated and may contain inaccuracies. Always verify details on original sources.",
         noData: "No data available.",
         locale: "en-US"
       },
@@ -161,6 +167,7 @@ export function renderHtml(newsItems, meta) {
         scoreInfoCap: "Risultato finale limitato tra 1 e 10.",
         scoreInfoButton: "Info punteggio",
         close: "Chiudi",
+        aiTransparency: "Trasparenza AI: questo sito è stato creato con strumenti di intelligenza artificiale per raccolta, sintesi e traduzione delle notizie. I contenuti sono automatizzati e possono contenere imprecisioni. Verificare sempre i dettagli sulle fonti originali.",
         noData: "Nessun dato disponibile.",
         locale: "it-IT"
       }
